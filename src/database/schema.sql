@@ -5,7 +5,6 @@ CREATE DATABASE partylife;
 CREATE TABLE places (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    localization VARCHAR(255) NOT NULL,
     description TEXT,
     place_photo TEXT
 );
@@ -98,3 +97,4 @@ VALUES
 ('Círculo Dourado', 'Evento black-tie com gastronomia refinada e performances ao vivo.', 'circulodourado.jpg'),
 ('Ilha Privada','Festa em ilha exclusiva, com transporte incluso e serviço all inclusive.', 'ilhaprivada.jpg'),
 ('Espelho da Lua', 'Celebração intimista sob a lua cheia, com pista silenciosa e open bar de drinks autorais.', 'espelhodalua.jpg');
+
