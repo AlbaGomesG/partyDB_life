@@ -84,3 +84,17 @@ CREATE TABLE posts (
     content VARCHAR(300) NOT NULL,
     data_postagem DATE DEFAULT CURRENT_DATE
 );
+
+// inserts
+
+INSERT INTO places (name, description, place_photo)
+VALUES 
+('Sunset Privé', 'Evento exclusivo com DJs renomados, open bar premium e vista para o pôr do sol.', 'https://dicasdefortalezaejeri.com.br/wp-content/uploads/sites/29/2022/03/clubventos-jeri-jpeg.webp'),
+('Noite Branca','Uma noite all white com convidados selecionados, champagne e muita elegância.', 'noitebranca.jpg'),
+('Garden Secret', 'Coquetel privado em um jardim secreto, com finger foods e jazz ao vivo.', 'gardensecret.jpg'),
+('Vibes Select', 'Festa fechada com line-up especial e acesso restrito para convidados.', 'vibesselect.jpg'),
+('Aurora Exclusive', 'Sunrise party para um grupo seleto, com café da manhã gourmet e música chill.', 'auroraexclusive.jpg'),
+('Clube 88', 'Uma experiência noturna reservada para membros e convidados VIP.', 'clube88.jpg'),
+('Círculo Dourado', 'Evento black-tie com gastronomia refinada e performances ao vivo.', 'circulodourado.jpg'),
+('Ilha Privada','Festa em ilha exclusiva, com transporte incluso e serviço all inclusive.', 'ilhaprivada.jpg'),
+('Espelho da Lua', 'Celebração intimista sob a lua cheia, com pista silenciosa e open bar de drinks autorais.', 'espelhodalua.jpg');
