@@ -110,3 +110,16 @@ VALUES
 ('https://escaesco.com.br/wp-content/uploads/2023/11/IZA.jpg', 'IZA', 'A potência vocal de IZA em um espetáculo de R&B, pop e soul.'),
 ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAK_Hi4BdSTrbACLE5V2H0rqsbsSZlC2Hig&s', 'Ludmilla', 'Funk, pagode e pop num show cheio de atitude com Ludmilla.'),
 ('https://web.portalsucesso.com.br/wp-content/uploads/2023/12/mc-don-juan-19-dez.png', 'MC Don Juan', 'Funk consciente e dançante com um dos maiores nomes da cena.');
+
+INSERT INTO styles (style_photo, name, description)
+VALUES 
+('electronic.jpg', 'Eletrônica', 'Festas com música eletrônica.'),
+('rock.jpg', 'Rock', 'Eventos com bandas de rock ao vivo.'),
+('pop.jpg', 'Pop', 'Festas com hits do momento.'),
+('jazz.jpg', 'Jazz', 'Eventos com música jazz ao vivo.'),
+('hiphop.jpg', 'Hip-Hop', 'Festas com música hip-hop e rap.'),
+('classical.jpg', 'Clássica', 'Eventos com música clássica.'),
+('funk.jpg', 'Funk', 'Festas animadas com os maiores nomes do funk.'),
+('sertanejo.jpg', 'Sertanejo', 'Eventos com shows sertanejos e clima de interior.'),
+('reggae.jpg', 'Reggae', 'Vibrações positivas e muito reggae ao vivo.'),
+('trap.jpg', 'Trap', 'Festas com beats pesados e artistas da cena trap.');
