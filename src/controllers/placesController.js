@@ -22,4 +22,17 @@ const getPlace = async (req, res) => {
     }
 };
 
-module.exports = { getAllPlaces, getPlace }
+const createPlace = async (req, res) => {
+    try{
+        const { name, description, place_photo } = req.body;
+        const newPlace = await placesModel.createPlace(name, description, place_photo);
+        res.status(201).json({ message: "Lugar criado com sucesso!", newPlace});
+    } catch (error) {
+        if (error.code === "23505") {
+            return res.status(400).json({ message: "Esse lugar já existe no nosso sistema!"});
+        }
+        res.status(404).json({ message: "Erro ao criar lugar!"});
+    }
+};
+
+module.exports = { getAllPlaces, getPlace, createPlace }

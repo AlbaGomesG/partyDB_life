@@ -10,4 +10,9 @@ const getPlaceById = async (id) => {
     return result.rows[0];
 };
 
-module.exports = { getPlaces, getPlaceById };
+const createPlace = async (name, description, place_photo) => {
+    const result = await pool.query("INSERT INTO places (name, description, place_photo) VALUES ($1, $2, $3) RETURNING *", [name, description, place_photo]);
+    return result.rows[0];
+};
+
+module.exports = { getPlaces, getPlaceById, createPlace };
