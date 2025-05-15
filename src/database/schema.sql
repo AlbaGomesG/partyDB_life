@@ -33,37 +33,11 @@ CREATE TABLE events (
     time_start TIME,
     time_end TIME,
     description TEXT,
-    event_photo TEXT      
-);
-
-    CREATE TABLE events_rules (
-    id SERIAL PRIMARY KEY,
-    event_id INTEGER NOT NULL REFERENCES events(id) ON DELETE SET NULL,
-    description TEXT NOT NULL
-);
-
-    CREATE TABLE itens_festa (
-    id SERIAL PRIMARY KEY,
-    event_id INTEGER NOT NULL REFERENCES events(id) ON DELETE SET NULL,
-    item VARCHAR(100) NOT NULL
-);
-
-    CREATE TABLE party_itens (
-    id SERIAL PRIMARY KEY,
-    event_id INTEGER NOT NULL REFERENCES events(id) ON DELETE SET NULL,
-    item VARCHAR(100) NOT NULL
-);
-
-    CREATE TABLE take_products (
-    id SERIAL PRIMARY KEY,
-    event_id INTEGER NOT NULL REFERENCES events(id) ON DELETE SET NULL,
-    description VARCHAR(200) NOT NULL
-);
-
-CREATE TABLE hashtags (
-    id SERIAL PRIMARY KEY,
-    event_id INTEGER NOT NULL REFERENCES events(id) ON DELETE SET NULL,
-    hashtag VARCHAR(50) NOT NULL
+    event_photo TEXT 
+    events_rules TEXT,
+    party_itens TEXT,
+    take_products TEXT,
+    hashtags VARCHAR(50),
 );
 
 CREATE TABLE users (
@@ -82,6 +56,13 @@ CREATE TABLE posts (
     image_post TEXT NOT NULL,
     content VARCHAR(300) NOT NULL,
     data_postagem DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE integrantes (
+    id SERIAL PRIMARY KEY,
+    photo_integrante TEXT,
+    name VARCHAR(255) NOT NULL,
+    funcao_equipe VARCHAR(255) NOT NULL
 );
 
 // inserts
@@ -240,4 +221,19 @@ VALUES
 (4, '#JazzAoPorDoSol'),
 (5, '#KaraokeNight'),
 (6, '#FestaNaCobertura');
+
+INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
+VALUES 
+(1, 1, 'maria_festa.jpg', 'A melhor festa da praia!', '2025-06-22'),
+(2, 2, 'joao_festival.jpg', 'Festival de rock incrível!', '2025-07-20'),
+(3, 3, 'ana_noite.jpg', 'Noite eletrônica perfeita!', '2025-08-10'),
+(4, 4, 'carlos_jazz.jpg', 'Jazz ao pôr do sol é tudo!', '2025-09-05'),
+(5, 5, 'fernanda_karaoke.jpg', 'Karaokê night foi demais!', '2025-10-12'),
+(6, 6, 'lucas_cobertura.jpg', 'Festa na cobertura com vista incrível!', '2025-11-18');
+
+INSERT INTO integrantes (photo_integrante, name, funcao_equipe)
+VALUES 
+('giovanna.png', 'Giovanna Alba', 'Product Owner'),
+('maria.png', 'Maria Eduarda', 'Scrum Master'),
+('enzo.png', 'Enzo Turcovic', 'Desenvolvedor'),
 
