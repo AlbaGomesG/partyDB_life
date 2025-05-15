@@ -181,7 +181,7 @@ VALUES
 ('Fernanda Lima', 'fernandal', 'fernanda@example.com', 'fernanda.jpg', 'Fotógrafa de eventos.'),
 ('Lucas Pereira', 'lucasp', 'lucas@example.com', 'lucas.jpg', 'Produtor de eventos.');
   
--- Inserindo dados na tabela events
+
 INSERT INTO events (title, localization, date, time_start, time_end, description, event_photo)
 VALUES 
 ('Praia da vila', 'Praia da vila', '2025-06-22', '15:00', '23:00', 'Uma festa inesquecível na praia.', 'festapraia.jpg'),
@@ -191,7 +191,7 @@ VALUES
 ('Karaokê Night', 'City Hall', '2025-10-12', '19:00', '23:00', 'Noite divertida de karaokê.', 'karaokenight.jpg'),
 ('Festa na Cobertura', 'Rooftop Lounge', '2025-11-18', '20:00', '02:00', 'Festa com vista panorâmica.', 'festacobertura.jpg');
 
--- Inserindo dados na tabela eventsrules
+
 INSERT INTO eventsrules (event_id, description)
 VALUES 
 (1, 'Proibido levar bebidas de fora.'),
@@ -201,7 +201,7 @@ VALUES
 (5, 'Entrada gratuita para crianças até 12 anos.'),
 (6, 'Proibido o uso de drones.');
 
--- Inserindo dados na tabela itensfesta
+
 INSERT INTO itensfesta (event_id, item)
 VALUES 
 (1, 'Cadeiras de praia'),
@@ -211,7 +211,7 @@ VALUES
 (3, 'Cabine de DJ'),
 (3, 'Iluminação especial');
 
--- Inserindo dados na tabela partyitens
+
 INSERT INTO partyitens (event_id, item)
 VALUES 
 (1, 'Decoração temática'),
@@ -221,7 +221,7 @@ VALUES
 (5, 'Balões personalizados'),
 (6, 'Tapete vermelho');
 
--- Inserindo dados na tabela takeproducts
+
 INSERT INTO takeproducts (event_id, description)
 VALUES 
 (1, 'Kit de boas-vindas com brindes.'),
@@ -231,7 +231,7 @@ VALUES
 (5, 'Fotos impressas do evento.'),
 (6, 'Adesivos temáticos.');
 
--- Inserindo dados na tabela hashtags
+
 INSERT INTO hashtags (event_id, hashtag)
 VALUES 
 (1, '#FestaNaPraia'),
