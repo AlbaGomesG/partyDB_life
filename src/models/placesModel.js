@@ -20,4 +20,12 @@ const updatePlace = async (id, description, place_photo) => {
     return result.rows[0];
 };
 
-module.exports = { getPlaces, getPlaceById, createPlace, updatePlace };
+const deletePlace = async (id) => {
+    const result = await pool.query("DELETE FROM places WHERE id = $1 RETURNING *", [id]);
+    if (result.rowCount === 0) {
+        return {error: "Esse lugar já existe no nosso sistema!"};
+    }
+    return {message: "Lugar deletado com sucesso!"};
+};
+
+module.exports = { getPlaces, getPlaceById, createPlace, updatePlace, deletePlace };

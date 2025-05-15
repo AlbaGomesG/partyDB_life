@@ -48,4 +48,13 @@ const updatePlace = async (req, res) => {
     }
 };
 
-module.exports = { getAllPlaces, getPlace, createPlace ,updatePlace }
+const deletePlace = async (req, res) => {
+    try {
+        const message = await placesModel.deletePlace(req.params.id);
+        res.json(message);
+    } catch (error) {
+        res.status(500).json({ message: "Erro ao deletar o lugar!"});
+    }
+};
+
+module.exports = { getAllPlaces, getPlace, createPlace ,updatePlace, deletePlace }
