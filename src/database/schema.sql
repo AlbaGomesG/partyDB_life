@@ -98,3 +98,15 @@ VALUES
 ('Rodeio de Americana','O maior rodeio do Brasil, com montarias emocionantes e shows de artistas renomados.', 'https://i.postimg.cc/SxV5v2st/rodeio-americana-palco-1.webp'),
 ('Gate 22', 'Balada exclusiva com DJs de renome, open bar e atmosfera futurista até o amanhecer.', 'https://api.wegoout.com.br/wp-uploads/wp-images/2023/05/gate22_2.jpg');
 
+INSERT INTO attractions (attraction_photo, name, description)
+VALUES 
+('https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/11/alok-3-e1732129463931.jpg?w=1200&h=675&crop=1', 'Alok', 'Set exclusivo do DJ Alok, com os maiores hits da música eletrônica.'),
+('https://upload.wikimedia.org/wikipedia/commons/2/23/Anitta_for_Attractive_Mindset_podcast_02.jpg', 'Anitta', 'Show imperdível com Anitta, trazendo sucessos nacionais e internacionais.'),
+('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCrS0TMFl3uyP8myP-tRF6WAz2ROIcUcMToA&s', 'Veigh', 'Rapper paulista com letras profundas e estilo trap melódico.'),
+('https://akamai.sscdn.co/uploadfile/letras/fotos/a/f/7/5/af75f377c71b19169c8baf2328301939.jpg', 'Luan Santana', 'Romantismo e sertanejo em um show intimista com Luan Santana.'),
+('https://s2-oglobo.glbimg.com/Mk_q8SQEZ0AkJjwbppB_kbKIXPE=/0x0:3648x4880/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/r/Y/2qMrFqSY6Me6iBpUz26w/102750176-sc-kayblack-lovesongs.jpg', 'Kayblack', 'Um dos maiores nomes do trap/funk, com letras marcantes e batidas envolventes.'),
+('https://f.i.uol.com.br/fotografia/2023/03/23/1679597918641ca15e4afa9_1679597918_3x2_rt.jpg', 'MC Hariel', 'Funk de mensagem e presença de palco poderosa com MC Hariel.'),
+('https://cdn-images.dzcdn.net/images/artist/46bf72b87250439262cc168d8fdcd240/1900x1900-000000-80-0-0.jpg', 'Jorge & Mateus', 'Dupla sertaneja apresenta um repertório repleto de sucessos.'),
+('https://escaesco.com.br/wp-content/uploads/2023/11/IZA.jpg', 'IZA', 'A potência vocal de IZA em um espetáculo de R&B, pop e soul.'),
+('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAK_Hi4BdSTrbACLE5V2H0rqsbsSZlC2Hig&s', 'Ludmilla', 'Funk, pagode e pop num show cheio de atitude com Ludmilla.'),
+('https://web.portalsucesso.com.br/wp-content/uploads/2023/12/mc-don-juan-19-dez.png', 'MC Don Juan', 'Funk consciente e dançante com um dos maiores nomes da cena.');
