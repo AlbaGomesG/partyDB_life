@@ -3,5 +3,6 @@ const router = express.Router();
 const placesController = require("../controllers/placesController");
 
 router.get("/", placesController.getAllPlaces);
+router.get("/:id", placesController.getPlace);
 
 module.exports = router;
