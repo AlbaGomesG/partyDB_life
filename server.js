@@ -1,15 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const usersRoutes = require("./src/routes/usersRoutes");
-const postsRoutes = require("./src/routes/postsRoutes");
+const placesRoutes = require("./src/routes/placesRoutes");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/users", usersRoutes);
-app.use("/api/posts", postsRoutes);
+app.use("/api/places", placesRoutes);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
