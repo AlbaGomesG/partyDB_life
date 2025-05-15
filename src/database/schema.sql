@@ -97,6 +97,52 @@ VALUES
 ('Círculo Dourado', 'Evento black-tie com gastronomia refinada e performances ao vivo.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGHVgP-HaaLQm8j0EmtWTSbncGCtWduS1UQ&s'),
 ('Rodeio de Americana','O maior rodeio do Brasil, com montarias emocionantes e shows de artistas renomados.', 'https://i.postimg.cc/SxV5v2st/rodeio-americana-palco-1.webp'),
 ('Gate 22', 'Balada exclusiva com DJs de renome, open bar e atmosfera futurista até o amanhecer.', 'https://api.wegoout.com.br/wp-uploads/wp-images/2023/05/gate22_2.jpg');
+('Festival Tropical', 'Festival com ritmos latinos e música ao vivo, ambiente descontraído e muito calor humano.', 'https://festival_tropical.jpg'),
+('Lounge Vip', 'Ambiente intimista com drinks sofisticados e música lounge, perfeito para relaxar.', 'https://lounge_vip.jpg'),
+('Underwater Party', 'Festa temática subaquática com DJs ao vivo e luzes incríveis em um cenário surreal.', 'https:///underwater_party.jpg'),
+('Masquerade Ball', 'Baile de máscaras elegante com traje formal e um toque de mistério.', 'https://masquerade_ball.jpg'),
+('Rooftop Experience', 'Festa exclusiva no topo do prédio com uma vista deslumbrante da cidade e muita música eletrônica.', 'https://rooftop_experience.jpg'),
+('Jungle Escape', 'Festa no meio da natureza, com temática de jungle e DJs trazendo o melhor do house e techno.', 'https://jungle_escape.jpg'),
+('Secret Garden', 'Evento secreto em um jardim encantado com música ao vivo e gastronomia sofisticada.', 'https://secret_garden.jpg'),
+('Neon Lights', 'Festa com luzes neon, arte interativa e música para dançar até amanhecer.', 'https://neon_lights.jpg'),
+('Glamour Night', 'Noite glamourosa com tapete vermelho, moda e shows de artistas internacionais.', 'https://glamour_night.jpg'),
+('Cosmic Journey', 'Evento futurista com decoração cósmica, DJs e uma imersão sonora de tirar o fôlego.', 'https://cosmic_journey.jpg');
+('Carnaval Privé', 'Festa de carnaval exclusiva com desfiles e shows de samba ao vivo.', 'https://carnaval_prive.jpg'),
+('Summer Vibes', 'Festa tropical com drinks exóticos, pista de dança ao ar livre e muita energia.', 'https://summer_vibes.jpg'),
+('Black & Gold', 'Evento sofisticado com dress code black & gold e performances de artistas internacionais.', 'https://black_and_gold.jpg'),
+('Gatsby Night', 'Noite inspirada nos anos 20 com glamour, jazz ao vivo e muito champagne.', 'https://gatsby_night.jpg'),
+('Sunset Beats', 'Festa ao pôr do sol com DJs de música eletrônica e uma vista incrível do mar.', 'https://sunset_beats.jpg'),
+('Masquerade in Venice', 'Baile de máscaras veneziano com música clássica, elegante e misteriosa.', 'https://masquerade_venice.jpg'),
+('Winter Wonderland', 'Evento invernal com decoração temática e festas quentes ao redor da lareira.', 'https://winter_wonderland.jpg'),
+('Tropical Luau', 'Festa havaiana com muito limbo, coquetéis tropicais e show de dança polinésia.', 'https://tropical_luau.jpg'),
+('Techno Tribe', 'Festa underground com DJs de techno e arte visual futurista.', 'https://techno_tribe.jpg'),
+('Electric Dreams', 'Evento de música eletrônica com performances visuais e artistas de renome mundial.', 'https://electric_dreams.jpg');
+('Neon Party', 'Festa vibrante com luzes neon, música eletrônica e visual imersivo.', 'https://neon_party.jpg'),
+('Vintage Night', 'Uma noite retrô com música dos anos 80 e 90, com muito charme e estilo.', 'https://vintage_night.jpg'),
+('Glow in the Dark', 'Evento iluminado por luzes UV, com pista de dança e drinks fluorescentes.', 'https://glow_in_the_dark.jpg'),
+('Sahara Experience', 'Festa temática no deserto com decoração exótica e música árabe moderna.', 'https://www.example.com/sahara_experience.jpg'),
+('Moonlight Gala', 'Baile de gala ao ar livre com vista para a lua e uma atmosfera encantadora.', 'https://www.example.com/moonlight_gala.jpg'),
+('Festa das Estrelas', 'Celebração estrelada com DJs, luzes cintilantes e muito brilho.', 'https://www.example.com/festa_das_estrelas.jpg'),
+('Miami Nights', 'Festa no estilo de Miami com muita música latina, drinks e energia contagiante.', 'https://www.example.com/miami_nights.jpg'),
+('Cirque du Soleil Party', 'Festa temática inspirada no Cirque du Soleil, com performances de circo e arte.', 'https://www.example.com/cirque_du_soleil_party.jpg'),
+('Secret Masquerade', 'Evento secreto com tema de baile de máscaras e glamour.', 'https://www.example.com/secret_masquerade.jpg'),
+('Fiesta Latina', 'Festa com ritmos latinos, danças típicas e uma atmosfera vibrante.', 'https://www.example.com/fiesta_latina.jpg');
+('Retro Wave', 'Festa com temática dos anos 80 e 90, com música retro e muita nostalgia.', 'https://www.example.com/retro_wave.jpg'),
+('Fiesta do Sol', 'Festa ao ar livre com temática tropical, drinks refrescantes e muita música.', 'https://www.example.com/fiesta_do_sol.jpg'),
+('La Noche Española', 'Noite espanhola com flamenco, tapas e uma atmosfera vibrante.', 'https://www.example.com/la_noche_espagnola.jpg'),
+('Cosmic Odyssey', 'Festa futurista com tema espacial, luzes e DJs de música eletrônica.', 'https://www.example.com/cosmic_odyssey.jpg'),
+('Tropical Storm', 'Festa com temática tropical e mistura de ritmos latino e eletrônico.', 'https://www.example.com/tropical_storm.jpg'),
+('Lunar Eclipse', 'Evento exclusivo durante a lua cheia, com uma vibe mística e shows ao vivo.', 'https://www.example.com/lunar_eclipse.jpg'),
+('Hollywood Glam', 'Noite de glamour inspirada no estilo Hollywood, com tapete vermelho e coquetéis sofisticados.', 'https://www.example.com/hollywood_glam.jpg'),
+('Hawaiian Breeze', 'Festa temática havaiana com danças típicas, coquetéis tropicais e muita energia.', 'https://www.example.com/hawaiian_breeze.jpg'),
+('Winter Fiesta', 'Festa de inverno com música quente e atmosfera aconchegante ao redor da lareira.', 'https://www.example.com/winter_fiesta.jpg'),
+('Renaissance Ball', 'Baile de máscaras com temática renascentista e performances artísticas.', 'https://www.example.com/renaissance_ball.jpg'),
+('Blackout Party', 'Evento no escuro com luzes neon e música eletrônica, uma experiência única.', 'https://www.example.com/blackout_party.jpg'),
+('Sunset Bliss', 'Festa ao pôr do sol com DJs relaxantes, drinks sofisticados e uma vibe zen.', 'https://www.example.com/sunset_bliss.jpg');
+
+
+
+
 
 INSERT INTO attractions (attraction_photo, name, description)
 VALUES 
@@ -110,3 +156,88 @@ VALUES
 ('https://escaesco.com.br/wp-content/uploads/2023/11/IZA.jpg', 'IZA', 'A potência vocal de IZA em um espetáculo de R&B, pop e soul.'),
 ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAK_Hi4BdSTrbACLE5V2H0rqsbsSZlC2Hig&s', 'Ludmilla', 'Funk, pagode e pop num show cheio de atitude com Ludmilla.'),
 ('https://web.portalsucesso.com.br/wp-content/uploads/2023/12/mc-don-juan-19-dez.png', 'MC Don Juan', 'Funk consciente e dançante com um dos maiores nomes da cena.');
+
+INSERT INTO styles (style_photo, name, description)
+VALUES 
+('electronic.jpg', 'Eletrônica', 'Festas com música eletrônica.'),
+('rock.jpg', 'Rock', 'Eventos com bandas de rock ao vivo.'),
+('pop.jpg', 'Pop', 'Festas com hits do momento.'),
+('jazz.jpg', 'Jazz', 'Eventos com música jazz ao vivo.'),
+('hiphop.jpg', 'Hip-Hop', 'Festas com música hip-hop e rap.'),
+('classical.jpg', 'Clássica', 'Eventos com música clássica.'),
+('funk.jpg', 'Funk', 'Festas animadas com os maiores nomes do funk.'),
+('sertanejo.jpg', 'Sertanejo', 'Eventos com shows sertanejos e clima de interior.'),
+('reggae.jpg', 'Reggae', 'Vibrações positivas e muito reggae ao vivo.'),
+('trap.jpg', 'Trap', 'Festas com beats pesados e artistas da cena trap.');
+
+
+
+INSERT INTO users (name, username, email, perfil_photo, bio)
+VALUES 
+('Maria Eduarda', 'mariaeduarda', 'maria@example.com', 'maria.jpg', 'Amante de festas e eventos.'),
+('João Silva', 'joaosilva', 'joao@example.com', 'joao.jpg', 'Organizador de eventos.'),
+('Ana Paula', 'anapaula', 'ana@example.com', 'ana.jpg', 'Especialista em decoração de festas.'),
+('Carlos Mendes', 'carlosm', 'carlos@example.com', 'carlos.jpg', 'DJ profissional.'),
+('Fernanda Lima', 'fernandal', 'fernanda@example.com', 'fernanda.jpg', 'Fotógrafa de eventos.'),
+('Lucas Pereira', 'lucasp', 'lucas@example.com', 'lucas.jpg', 'Produtor de eventos.');
+  
+-- Inserindo dados na tabela events
+INSERT INTO events (title, localization, date, time_start, time_end, description, event_photo)
+VALUES 
+('Praia da vila', 'Praia da vila', '2025-06-22', '15:00', '23:00', 'Uma festa inesquecível na praia.', 'festapraia.jpg'),
+('Festival de Rock', 'Mountain Resort', '2025-07-20', '14:00', '22:00', 'Festival com as melhores bandas de rock.', 'festivalrock.jpg'),
+('Noite Eletrônica', 'Night Club', '2025-08-10', '22:00', '04:00', 'Balada com os melhores DJs.', 'noiteeletronica.jpg'),
+('Jazz ao Pôr do Sol', 'Garden Party', '2025-09-05', '17:00', '20:00', 'Evento relaxante com música jazz.', 'jazzpordosol.jpg'),
+('Karaokê Night', 'City Hall', '2025-10-12', '19:00', '23:00', 'Noite divertida de karaokê.', 'karaokenight.jpg'),
+('Festa na Cobertura', 'Rooftop Lounge', '2025-11-18', '20:00', '02:00', 'Festa com vista panorâmica.', 'festacobertura.jpg');
+
+-- Inserindo dados na tabela eventsrules
+INSERT INTO eventsrules (event_id, description)
+VALUES 
+(1, 'Proibido levar bebidas de fora.'),
+(2, 'Entrada permitida apenas para maiores de 18 anos.'),
+(3, 'Obrigatório apresentar documento de identidade.'),
+(4, 'Proibido fumar no local.'),
+(5, 'Entrada gratuita para crianças até 12 anos.'),
+(6, 'Proibido o uso de drones.');
+
+-- Inserindo dados na tabela itensfesta
+INSERT INTO itensfesta (event_id, item)
+VALUES 
+(1, 'Cadeiras de praia'),
+(1, 'Guarda-sóis'),
+(2, 'Palco para bandas'),
+(2, 'Sistema de som'),
+(3, 'Cabine de DJ'),
+(3, 'Iluminação especial');
+
+-- Inserindo dados na tabela partyitens
+INSERT INTO partyitens (event_id, item)
+VALUES 
+(1, 'Decoração temática'),
+(2, 'Luzes de palco'),
+(3, 'Máquina de fumaça'),
+(4, 'Velas aromáticas'),
+(5, 'Balões personalizados'),
+(6, 'Tapete vermelho');
+
+-- Inserindo dados na tabela takeproducts
+INSERT INTO takeproducts (event_id, description)
+VALUES 
+(1, 'Kit de boas-vindas com brindes.'),
+(2, 'Pulseiras de acesso VIP.'),
+(3, 'Camisetas personalizadas.'),
+(4, 'Copos reutilizáveis.'),
+(5, 'Fotos impressas do evento.'),
+(6, 'Adesivos temáticos.');
+
+-- Inserindo dados na tabela hashtags
+INSERT INTO hashtags (event_id, hashtag)
+VALUES 
+(1, '#FestaNaPraia'),
+(2, '#FestivalDeRock'),
+(3, '#NoiteEletronica'),
+(4, '#JazzAoPorDoSol'),
+(5, '#KaraokeNight'),
+(6, '#FestaNaCobertura');
+
