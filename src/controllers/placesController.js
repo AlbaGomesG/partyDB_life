@@ -35,4 +35,17 @@ const createPlace = async (req, res) => {
     }
 };
 
-module.exports = { getAllPlaces, getPlace, createPlace }
+const updatePlace = async (req, res) => {
+    try{
+        const { description, place_photo} = req.body;
+        const updatePlace = await placesModel.updatePlace(req.params.id, description, place_photo);
+        if (!updatePlace) {
+            return res.status(404).json({ message: "Lugar não foi encontrado!"});
+        }
+        res.status(201).json({ message: "Lugar foi atualizado com sucesso!", updatePlace});
+    } catch (error) {
+        return res.status(500).json({ message: "Erro ao atualizar lugar!"});
+    }
+};
+
+module.exports = { getAllPlaces, getPlace, createPlace ,updatePlace }
