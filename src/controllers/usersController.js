@@ -22,4 +22,18 @@ const getUser = async (req, res) => {
     }
 };
 
-module.exports = {getAllUsers, getUser}
+const createUser = async (req, res) => {
+    try{
+        const{ name, username, email, bio } = req.body;
+        const perfil_photo = req.file ? req.file.filename : null;
+        const newUser = await userModel.createUser(name, username, email, perfil_photo, bio);
+        res.status(201).json({ message: "Usuário criado com sucesso!", newUser});
+    } catch (error) {
+        if (error.code === "23505") {
+            return res.status(400).json({ message: "Usuário já está cadastrado!"});
+        }
+        res.status(500).json({ message: "Erro ao criar usuário!"});
+    }
+};
+
+module.exports = {getAllUsers, getUser, createUser}
