@@ -28,7 +28,7 @@ CREATE TABLE events (
     title VARCHAR(255) NOT NULL,
     place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE SET NULL,
     attraction_id INTEGER,
-    FOREIGN KEY (attraction_id) REFERENCES attractions (id) ON DELETE SET NULL,
+    FOREIGN KEY (attraction_id) REFERENCES, attractions (id) ON DELETE SET NULL,
     style_id INTEGER NOT NULL REFERENCES styles (id) ON DELETE SET NULL,
     time_start TIME,
     time_end TIME,
@@ -236,4 +236,3 @@ VALUES
 ('giovanna.png', 'Giovanna Alba', 'Product Owner'),
 ('maria.png', 'Maria Eduarda', 'Scrum Master'),
 ('enzo.png', 'Enzo Turcovic', 'Desenvolvedor'),
-
