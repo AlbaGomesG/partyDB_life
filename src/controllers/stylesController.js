@@ -34,4 +34,17 @@ const createStyle = async (req, res) => {
     }
 };
 
-module.exports = { getAllStyles, getStyle, createStyle };
+const updateStyle = async (req, res) => {
+    try {
+        const { name, description } = req.body;
+        const updateStyle = await stylesModel.updateStyle(req.params.id, name, description);
+        if (!updateStyle) {
+            return res.status(404).json({ message: "Estilo não foi encontrado!"});
+        }
+        res.json({ message: "Estilo atualizado com sucesso!", style: updateStyle });
+    } catch (error) {
+        res.status(500).json({ message: "Erro ao atualizar estilo!"});
+    }
+};
+
+module.exports = { getAllStyles, getStyle, createStyle, updateStyle };
