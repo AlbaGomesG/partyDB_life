@@ -15,4 +15,10 @@ const getStyleById = async (id) => {
     return result.rows[0];
 };
 
-module.exports = { getStyles, getStyleById };
+const createStyle = async (style_photo, name, description) => {
+    const result = await pool.query(
+        "INSERT INTO styles (style_photo, name, description) VALUES ($1, $2, $3) RETURNING *", [style_photo, name, description]);
+    return result.rows[0];
+};
+
+module.exports = { getStyles, getStyleById, createStyle };
