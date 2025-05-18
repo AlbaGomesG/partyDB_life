@@ -22,4 +22,15 @@ const getAttraction = async (req, res) => {
     }
 };
 
-module.exports = { getAllAttractions, getAttraction };
+const createAttraction = async (req, res) => {
+    try {
+        const { name, description } = req.body;
+        const attraction_photo = req.file ? req.file.filename : null;
+        const newAttraction = await attractionsModel.createAttraction(attraction_photo, name, description);
+        res.status(201).json({ message: "Atração criada com sucesso!", newAttraction});
+    } catch (error) {
+        res.status(500).json({ message: "Erro ao criar a atração!"});
+    }
+};
+
+module.exports = { getAllAttractions, getAttraction, createAttraction };

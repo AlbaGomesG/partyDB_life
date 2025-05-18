@@ -15,4 +15,9 @@ const getAttractionById = async (id) => {
     return result.rows[0];
 };
 
-module.exports = { getAttractions, getAttractionById };
+const createAttraction = async (attraction_photo, name, description) => {
+    const result = await pool.query("INSERT INTO attractions (attraction_photo, name, description) VALUES ($1, $2, $3) RETURNING *", [attraction_photo, name, description]);
+    return result.rows[0];
+};
+
+module.exports = { getAttractions, getAttractionById, createAttraction };
