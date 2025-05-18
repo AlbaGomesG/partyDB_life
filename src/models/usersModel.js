@@ -25,4 +25,12 @@ const updateUser = async (id, name, username, bio) => {
     return result.rows[0];
 }
 
-module.exports = {getUsers, getUserById, createUser, updateUser, updateUser};
+const deleteUser = async (id) => {
+    const result = await pool.query("DELETE FROM users WHERE id = $1 RETURNING *", [id]);
+    if (result.rowCount === 0) {
+        return {error: "Usuário não encontrado!"};
+    }
+    return {message: "Usuário deletado com sucesso!"};
+};
+
+module.exports = {getUsers, getUserById, createUser, updateUser, updateUser, deleteUser};
