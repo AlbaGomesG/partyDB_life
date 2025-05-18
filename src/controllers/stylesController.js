@@ -10,4 +10,17 @@ const getAllStyles = async (req, res) => {
     }
 };
 
-module.exports = { getAllStyles };
+const getStyle = async (req, res) => {
+    try {
+        const style = await stylesModel.getStyleById(req.params.id);
+        if (!style) {
+            return res.status(404).json({ message: "Estilo não foi encontrado!"});
+        }
+        res.json(style);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Erro ao buscar estilo!"});
+    }
+};
+
+module.exports = { getAllStyles, getStyle };
