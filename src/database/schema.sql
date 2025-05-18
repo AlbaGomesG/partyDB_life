@@ -28,16 +28,16 @@ CREATE TABLE events (
     title VARCHAR(255) NOT NULL,
     place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE SET NULL,
     attraction_id INTEGER,
-    FOREIGN KEY (attraction_id) REFERENCES, attractions (id) ON DELETE SET NULL,
+    FOREIGN KEY (attraction_id) REFERENCES attractions (id) ON DELETE SET NULL,
     style_id INTEGER NOT NULL REFERENCES styles (id) ON DELETE SET NULL,
     time_start TIME,
     time_end TIME,
     description TEXT,
-    event_photo TEXT 
+    event_photo TEXT,
     events_rules TEXT,
     party_itens TEXT,
     take_products TEXT,
-    hashtags VARCHAR(50),
+    hashtags VARCHAR(50)
 );
 
 CREATE TABLE users (
