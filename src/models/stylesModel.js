@@ -26,4 +26,12 @@ const updateStyle = async (id, name, description) => {
     return result.rows[0];
 };
 
-module.exports = { getStyles, getStyleById, createStyle, updateStyle };
+const deleteStyle = async (id) => {
+    const result  = (await pool.query("DELETE FROM styles WHERE id = $1 RETURNING *", [id]));
+    if (result.rowCount === 0) {
+        return {error: "Estilo não foi encontrado!"};
+    }
+    return { message: "Estilo deletado com sucesso!" };
+};
+
+module.exports = { getStyles, getStyleById, createStyle, updateStyle, deleteStyle };
