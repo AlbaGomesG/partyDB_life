@@ -10,4 +10,9 @@ const getStyles = async (name) => {
     }
 };
 
-module.exports = { getStyles };
+const getStyleById = async (id) => {
+    const result = await pool.query("SELECT * FROM styles WHERE id = $1", [id]);
+    return result.rows[0];
+};
+
+module.exports = { getStyles, getStyleById };
