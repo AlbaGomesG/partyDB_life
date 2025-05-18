@@ -21,4 +21,9 @@ const createStyle = async (style_photo, name, description) => {
     return result.rows[0];
 };
 
-module.exports = { getStyles, getStyleById, createStyle };
+const updateStyle = async (id, name, description) => {
+    const result = await pool.query("UPDATE styles SET name = $1, description = $2 WHERE id = $3 RETURNING *", [name, description, id]);
+    return result.rows[0];
+};
+
+module.exports = { getStyles, getStyleById, createStyle, updateStyle };
