@@ -46,4 +46,13 @@ const updateAttraction = async (req, res) => {
     }
 };
 
-module.exports = { getAllAttractions, getAttraction, createAttraction, updateAttraction };
+const deleteAttraction = async (req, res) => {
+    try {
+        const message = await attractionsModel.deleteAttraction(req.params.id);
+        res.json(message);
+    } catch (error) {
+        res.status(500).json({ message: "Erro ao deletar a atração!"});
+    }
+};
+
+module.exports = { getAllAttractions, getAttraction, createAttraction, updateAttraction, deleteAttraction };

@@ -25,4 +25,12 @@ const updateAttraction = async (id, name, description) => {
     return result.rows[0];
 };
 
-module.exports = { getAttractions, getAttractionById, createAttraction, updateAttraction };
+const deleteAttraction = async (id) => {
+    const result = await pool.query("DELETE FROM attractions WHERE id = $1 RETURNING *", [id]);
+    if (result.rowCount === 0) {
+        return { error: "Atração não encontrada!" };
+    }
+    return { message: "Atração deletada com sucesso!" };
+};
+
+module.exports = { getAttractions, getAttractionById, createAttraction, updateAttraction, deleteAttraction };
