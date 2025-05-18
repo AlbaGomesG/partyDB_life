@@ -33,4 +33,17 @@ const createAttraction = async (req, res) => {
     }
 };
 
-module.exports = { getAllAttractions, getAttraction, createAttraction };
+const updateAttraction = async (req, res) => {
+    try {
+        const { name, description } = req.body;
+        const updateAttraction = await attractionsModel.updateAttraction(req.params.id, name, description);
+        if (!updateAttraction) {
+        return res.status(404).json({ message: "Atração não foi encontrada!"});
+        }
+        res.json({ message: "Atração atualizada com sucesso!", updateAttraction});
+    } catch (error) {
+        res.status(500).json({ message: "Erro ao atualizar a atração!"});
+    }
+};
+
+module.exports = { getAllAttractions, getAttraction, createAttraction, updateAttraction };

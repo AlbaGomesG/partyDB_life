@@ -20,4 +20,9 @@ const createAttraction = async (attraction_photo, name, description) => {
     return result.rows[0];
 };
 
-module.exports = { getAttractions, getAttractionById, createAttraction };
+const updateAttraction = async (id, name, description) => {
+    const result = await pool .query("UPDATE attractions SET name = $1, description = $2 WHERE id = $3 RETURNING *", [name, description, id]);
+    return result.rows[0];
+};
+
+module.exports = { getAttractions, getAttractionById, createAttraction, updateAttraction };
