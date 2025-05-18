@@ -23,4 +23,15 @@ const getStyle = async (req, res) => {
     }
 };
 
-module.exports = { getAllStyles, getStyle };
+const createStyle = async (req, res) => {
+    try {
+        const { name, description } = req.body;
+        const style_photo = req.file ? req.file.filename : null;
+        const newStyle = await stylesModel.createStyle(style_photo, name, description);
+        res.status(201).json({ message: "Estilo criado com sucesso!", style: newStyle });
+    } catch (error) {
+        res.status(500).json({ message: "Erro ao criar estilo!"});
+    }
+};
+
+module.exports = { getAllStyles, getStyle, createStyle };
