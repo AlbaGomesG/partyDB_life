@@ -148,8 +148,6 @@ VALUES
 ('reggae.jpg', 'Reggae', 'Vibrações positivas e muito reggae ao vivo.'),
 ('trap.jpg', 'Trap', 'Festas com beats pesados e artistas da cena trap.');
 
-
-
 INSERT INTO users (name, username, email, perfil_photo, bio)
 VALUES 
 ('Maria Eduarda', 'mariaeduarda', 'maria@example.com', 'maria.jpg', 'Amante de festas e eventos.'),
@@ -169,55 +167,6 @@ VALUES
 ('Karaokê Night', 'City Hall', '2025-10-12', '19:00', '23:00', 'Noite divertida de karaokê.', 'karaokenight.jpg'),
 ('Festa na Cobertura', 'Rooftop Lounge', '2025-11-18', '20:00', '02:00', 'Festa com vista panorâmica.', 'festacobertura.jpg');
 
-
-INSERT INTO eventsrules (event_id, description)
-VALUES 
-(1, 'Proibido levar bebidas de fora.'),
-(2, 'Entrada permitida apenas para maiores de 18 anos.'),
-(3, 'Obrigatório apresentar documento de identidade.'),
-(4, 'Proibido fumar no local.'),
-(5, 'Entrada gratuita para crianças até 12 anos.'),
-(6, 'Proibido o uso de drones.');
-
-
-INSERT INTO itensfesta (event_id, item)
-VALUES 
-(1, 'Cadeiras de praia'),
-(1, 'Guarda-sóis'),
-(2, 'Palco para bandas'),
-(2, 'Sistema de som'),
-(3, 'Cabine de DJ'),
-(3, 'Iluminação especial');
-
-
-INSERT INTO partyitens (event_id, item)
-VALUES 
-(1, 'Decoração temática'),
-(2, 'Luzes de palco'),
-(3, 'Máquina de fumaça'),
-(4, 'Velas aromáticas'),
-(5, 'Balões personalizados'),
-(6, 'Tapete vermelho');
-
-
-INSERT INTO takeproducts (event_id, description)
-VALUES 
-(1, 'Kit de boas-vindas com brindes.'),
-(2, 'Pulseiras de acesso VIP.'),
-(3, 'Camisetas personalizadas.'),
-(4, 'Copos reutilizáveis.'),
-(5, 'Fotos impressas do evento.'),
-(6, 'Adesivos temáticos.');
-
-
-INSERT INTO hashtags (event_id, hashtag)
-VALUES 
-(1, '#FestaNaPraia'),
-(2, '#FestivalDeRock'),
-(3, '#NoiteEletronica'),
-(4, '#JazzAoPorDoSol'),
-(5, '#KaraokeNight'),
-(6, '#FestaNaCobertura');
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
 VALUES 
