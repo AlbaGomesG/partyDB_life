@@ -47,4 +47,13 @@ const updateStyle = async (req, res) => {
     }
 };
 
-module.exports = { getAllStyles, getStyle, createStyle, updateStyle };
+const deleteStyle = async (req, res) => {
+    try {
+        const message = await stylesModel.deleteStyle(req.params.id);
+        res.json(message);
+    } catch (error) {
+        res.status(500).json({ message: "Erro ao deletar estilo!"});
+    }
+};
+
+module.exports = { getAllStyles, getStyle, createStyle, updateStyle, deleteStyle };
