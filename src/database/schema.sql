@@ -77,7 +77,7 @@ VALUES
 ('Clube 88', 'Uma experiência noturna reservada para membros e convidados VIP.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn01glhZ7K5dS60Z7byD_n5nxDi68Qmwtsrg&s'),
 ('Círculo Dourado', 'Evento black-tie com gastronomia refinada e performances ao vivo.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGHVgP-HaaLQm8j0EmtWTSbncGCtWduS1UQ&s'),
 ('Rodeio de Americana','O maior rodeio do Brasil, com montarias emocionantes e shows de artistas renomados.', 'https://i.postimg.cc/SxV5v2st/rodeio-americana-palco-1.webp'),
-('Gate 22', 'Balada exclusiva com DJs de renome, open bar e atmosfera futurista até o amanhecer.', 'https://api.wegoout.com.br/wp-uploads/wp-images/2023/05/gate22_2.jpg');
+('Gate 22', 'Balada exclusiva com DJs de renome, open bar e atmosfera futurista até o amanhecer.', 'https://api.wegoout.com.br/wp-uploads/wp-images/2023/05/gate22_2.jpg'),
 ('Festival Tropical', 'Festival com ritmos latinos e música ao vivo, ambiente descontraído e muito calor humano.', 'https://festival_tropical.jpg'),
 ('Lounge Vip', 'Ambiente intimista com drinks sofisticados e música lounge, perfeito para relaxar.', 'https://lounge_vip.jpg'),
 ('Underwater Party', 'Festa temática subaquática com DJs ao vivo e luzes incríveis em um cenário surreal.', 'https:///underwater_party.jpg'),
@@ -87,7 +87,7 @@ VALUES
 ('Secret Garden', 'Evento secreto em um jardim encantado com música ao vivo e gastronomia sofisticada.', 'https://secret_garden.jpg'),
 ('Neon Lights', 'Festa com luzes neon, arte interativa e música para dançar até amanhecer.', 'https://neon_lights.jpg'),
 ('Glamour Night', 'Noite glamourosa com tapete vermelho, moda e shows de artistas internacionais.', 'https://glamour_night.jpg'),
-('Cosmic Journey', 'Evento futurista com decoração cósmica, DJs e uma imersão sonora de tirar o fôlego.', 'https://cosmic_journey.jpg');
+('Cosmic Journey', 'Evento futurista com decoração cósmica, DJs e uma imersão sonora de tirar o fôlego.', 'https://cosmic_journey.jpg'),
 ('Carnaval Privé', 'Festa de carnaval exclusiva com desfiles e shows de samba ao vivo.', 'https://carnaval_prive.jpg'),
 ('Summer Vibes', 'Festa tropical com drinks exóticos, pista de dança ao ar livre e muita energia.', 'https://summer_vibes.jpg'),
 ('Black & Gold', 'Evento sofisticado com dress code black & gold e performances de artistas internacionais.', 'https://black_and_gold.jpg'),
@@ -97,7 +97,7 @@ VALUES
 ('Winter Wonderland', 'Evento invernal com decoração temática e festas quentes ao redor da lareira.', 'https://winter_wonderland.jpg'),
 ('Tropical Luau', 'Festa havaiana com muito limbo, coquetéis tropicais e show de dança polinésia.', 'https://tropical_luau.jpg'),
 ('Techno Tribe', 'Festa underground com DJs de techno e arte visual futurista.', 'https://techno_tribe.jpg'),
-('Electric Dreams', 'Evento de música eletrônica com performances visuais e artistas de renome mundial.', 'https://electric_dreams.jpg');
+('Electric Dreams', 'Evento de música eletrônica com performances visuais e artistas de renome mundial.', 'https://electric_dreams.jpg'),
 ('Neon Party', 'Festa vibrante com luzes neon, música eletrônica e visual imersivo.', 'https://neon_party.jpg'),
 ('Vintage Night', 'Uma noite retrô com música dos anos 80 e 90, com muito charme e estilo.', 'https://vintage_night.jpg'),
 ('Glow in the Dark', 'Evento iluminado por luzes UV, com pista de dança e drinks fluorescentes.', 'https://glow_in_the_dark.jpg'),
@@ -107,7 +107,7 @@ VALUES
 ('Miami Nights', 'Festa no estilo de Miami com muita música latina, drinks e energia contagiante.', 'https://www.example.com/miami_nights.jpg'),
 ('Cirque du Soleil Party', 'Festa temática inspirada no Cirque du Soleil, com performances de circo e arte.', 'https://www.example.com/cirque_du_soleil_party.jpg'),
 ('Secret Masquerade', 'Evento secreto com tema de baile de máscaras e glamour.', 'https://www.example.com/secret_masquerade.jpg'),
-('Fiesta Latina', 'Festa com ritmos latinos, danças típicas e uma atmosfera vibrante.', 'https://www.example.com/fiesta_latina.jpg');
+('Fiesta Latina', 'Festa com ritmos latinos, danças típicas e uma atmosfera vibrante.', 'https://www.example.com/fiesta_latina.jpg'),
 ('Retro Wave', 'Festa com temática dos anos 80 e 90, com música retro e muita nostalgia.', 'https://www.example.com/retro_wave.jpg'),
 ('Fiesta do Sol', 'Festa ao ar livre com temática tropical, drinks refrescantes e muita música.', 'https://www.example.com/fiesta_do_sol.jpg'),
 ('La Noche Española', 'Noite espanhola com flamenco, tapas e uma atmosfera vibrante.', 'https://www.example.com/la_noche_espagnola.jpg'),
@@ -120,9 +120,6 @@ VALUES
 ('Renaissance Ball', 'Baile de máscaras com temática renascentista e performances artísticas.', 'https://www.example.com/renaissance_ball.jpg'),
 ('Blackout Party', 'Evento no escuro com luzes neon e música eletrônica, uma experiência única.', 'https://www.example.com/blackout_party.jpg'),
 ('Sunset Bliss', 'Festa ao pôr do sol com DJs relaxantes, drinks sofisticados e uma vibe zen.', 'https://www.example.com/sunset_bliss.jpg');
-
-
-
 
 
 INSERT INTO attractions (attraction_photo, name, description)
