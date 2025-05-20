@@ -181,5 +181,9 @@ VALUES
 INSERT INTO integrantes (photo_integrante, name, funcao_equipe)
 VALUES 
 ('giovanna.png', 'Giovanna Alba', 'Product Owner'),
-('maria.png', 'Maria Eduarda', 'Scrum Master'),
+('maria.png', 'Maria Eduarda Parma', 'Scrum Master'),
 ('enzo.png', 'Enzo Turcovic', 'Desenvolvedor'),
+('kevin.png', 'Kevin Eziquiel', 'Desenvolvedor'),
+('lucas.png', 'Lucas Zani', 'Desenvolvedor'),
+('luiz.png', 'Luiz Henrique Aureliano', 'Desenvolvedor');
+
