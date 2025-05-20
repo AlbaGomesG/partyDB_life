@@ -8,7 +8,7 @@ const getAllIntegrantes = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: "Erro ao buscar integrantes!" });
     }
-}
+};
 const getIntegrante = async (req, res) => {
     try {
         const integrante = await integrantesModel.getIntegranteById(req.params.id);

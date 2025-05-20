@@ -51,7 +51,7 @@ CREATE TABLE users (
 
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE SET NULL,
+    user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
     event_id INTEGER NOT NULL REFERENCES events(id) ON DELETE SET NULL,
     image_post TEXT NOT NULL,
     content VARCHAR(300) NOT NULL,
@@ -148,24 +148,26 @@ VALUES
 ('reggae.jpg', 'Reggae', 'Vibrações positivas e muito reggae ao vivo.'),
 ('trap.jpg', 'Trap', 'Festas com beats pesados e artistas da cena trap.');
 
-INSERT INTO users (name, username, email, perfil_photo, bio)
-VALUES 
-('Maria Eduarda', 'mariaeduarda', 'maria@example.com', 'maria.jpg', 'Amante de festas e eventos.'),
-('João Silva', 'joaosilva', 'joao@example.com', 'joao.jpg', 'Organizador de eventos.'),
-('Ana Paula', 'anapaula', 'ana@example.com', 'ana.jpg', 'Especialista em decoração de festas.'),
-('Carlos Mendes', 'carlosm', 'carlos@example.com', 'carlos.jpg', 'DJ profissional.'),
-('Fernanda Lima', 'fernandal', 'fernanda@example.com', 'fernanda.jpg', 'Fotógrafa de eventos.'),
-('Lucas Pereira', 'lucasp', 'lucas@example.com', 'lucas.jpg', 'Produtor de eventos.');
-  
 
-INSERT INTO events (title, localization, date, time_start, time_end, description, event_photo)
+INSERT INTO users (name, username, email, senha, perfil_photo, bio)
 VALUES 
-('Praia da vila', 'Praia da vila', '2025-06-22', '15:00', '23:00', 'Uma festa inesquecível na praia.', 'festapraia.jpg'),
-('Festival de Rock', 'Mountain Resort', '2025-07-20', '14:00', '22:00', 'Festival com as melhores bandas de rock.', 'festivalrock.jpg'),
-('Noite Eletrônica', 'Night Club', '2025-08-10', '22:00', '04:00', 'Balada com os melhores DJs.', 'noiteeletronica.jpg'),
-('Jazz ao Pôr do Sol', 'Garden Party', '2025-09-05', '17:00', '20:00', 'Evento relaxante com música jazz.', 'jazzpordosol.jpg'),
-('Karaokê Night', 'City Hall', '2025-10-12', '19:00', '23:00', 'Noite divertida de karaokê.', 'karaokenight.jpg'),
-('Festa na Cobertura', 'Rooftop Lounge', '2025-11-18', '20:00', '02:00', 'Festa com vista panorâmica.', 'festacobertura.jpg');
+('Maria Eduarda', 'mariaeduarda', 'maria@example.com', '123456', 'maria.jpg', 'Amante de festas e eventos.'),
+('João Silva', 'joaosilva', 'joao@example.com', '123456', 'joao.jpg', 'Organizador de eventos.'),
+('Ana Paula', 'anapaula', 'ana@example.com', '123456', 'ana.jpg', 'Especialista em decoração de festas.'),
+('Carlos Mendes', 'carlosm', 'carlos@example.com', '123456', 'carlos.jpg', 'DJ profissional.'),
+('Fernanda Lima', 'fernandal', 'fernanda@example.com', '123456', 'fernanda.jpg', 'Fotógrafa de eventos.'),
+('Lucas Pereira', 'lucasp', 'lucas@example.com', '123456', 'lucas.jpg', 'Produtor de eventos.');
+
+
+INSERT INTO events (
+    title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo
+) VALUES
+('Praia da Vila', 1, 1, 1, '15:00', '23:00', 'Uma festa inesquecível na praia.', 'festapraia.jpg'),
+('Festival de Rock', 2, 2, 2, '14:00', '22:00', 'Festival com as melhores bandas de rock.', 'festivalrock.jpg'),
+('Noite Eletrônica', 3, 1, 1, '22:00', '04:00', 'Balada com os melhores DJs.', 'noiteeletronica.jpg'),
+('Jazz ao Pôr do Sol', 4, 3, 4, '17:00', '20:00', 'Evento relaxante com música jazz.', 'jazzpordosol.jpg'),
+('Karaokê Night', 5, NULL, 3, '19:00', '23:00', 'Noite divertida de karaokê.', 'karaokenight.jpg'),
+('Festa na Cobertura', 6, 4, 1, '20:00', '02:00', 'Festa com vista panorâmica.', 'festacobertura.jpg');
 
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
