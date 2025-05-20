@@ -7,6 +7,8 @@ const attractionsRoutes = require("./src/routes/attractionsRoutes");
 const stylesRoutes = require("./src/routes/stylesRoutes");
 const usersRoutes = require("./src/routes/usersRoutes");
 const authRoutes = require("./src/routes/authRoutes");
+const pool = require("./src/config/database");
+const integrantesRoutes = require("./src/routes/integrantesRoutes");
 
 
 const path = require("path");
@@ -19,6 +21,8 @@ app.use("/api/places", placesRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/attractions", attractionsRoutes);
+app.use("/api/integrantes", integrantesRoutes);
+
 app.use("/api/styles", stylesRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
