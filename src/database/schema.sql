@@ -45,6 +45,7 @@ CREATE TABLE users (
     name VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
     perfil_photo TEXT,
     bio TEXT
 );
@@ -65,7 +66,7 @@ CREATE TABLE integrantes (
     funcao_equipe VARCHAR(255) NOT NULL
 );
 
-// inserts
+/* inserts */
 
 INSERT INTO places (name, description, place_photo)
 VALUES 
