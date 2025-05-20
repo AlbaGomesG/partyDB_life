@@ -1,4 +1,5 @@
 const userModel = require("../models/usersModel");
+const pool = require("../config/database");
 
 const getAllUsers = async (req, res) => {
     try {
@@ -23,18 +24,24 @@ const getUser = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
-    try{
-        const{ name, username, email, bio } = req.body;
-        const perfil_photo = req.file ? req.file.filename : null;
-        const newUser = await userModel.createUser(name, username, email, perfil_photo, bio);
-        res.status(201).json({ message: "Usuário criado com sucesso!", newUser});
+    const{ name, username, email, senha, bio } = req.body;
+    const perfil_photo = req.file ? req.file.filename : null;
+
+    try {
+      const check = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+    if (check.rows.length > 0) {
+        return res.status(400).json({ message: 'Email já cadastrado' });
+    }
+
+
+    const newUser = await userModel.createUser(name, username, email, senha, perfil_photo, bio);
+    res.status(201).json(newUser);
     } catch (error) {
-        if (error.code === "23505") {
-            return res.status(400).json({ message: "Usuário já está cadastrado!"});
-        }
-        res.status(500).json({ message: "Erro ao criar usuário!"});
+        console.error('Erro ao registrar usuário:', error);
+        res.status(500).json({ message: 'Erro interno no servidor' });
     }
 };
+
 
 const updateUser = async (req, res) => {
     try {
