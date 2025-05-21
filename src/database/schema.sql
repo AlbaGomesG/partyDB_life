@@ -151,12 +151,12 @@ VALUES
 
 INSERT INTO users (name, username, email, senha, perfil_photo, bio)
 VALUES 
-('Maria Eduarda', 'mariaeduarda', 'maria@example.com', '123456', 'maria.jpg', 'Amante de festas e eventos.'),
-('João Silva', 'joaosilva', 'joao@example.com', '123456', 'joao.jpg', 'Organizador de eventos.'),
-('Ana Paula', 'anapaula', 'ana@example.com', '123456', 'ana.jpg', 'Especialista em decoração de festas.'),
-('Carlos Mendes', 'carlosm', 'carlos@example.com', '123456', 'carlos.jpg', 'DJ profissional.'),
-('Fernanda Lima', 'fernandal', 'fernanda@example.com', '123456', 'fernanda.jpg', 'Fotógrafa de eventos.'),
-('Lucas Pereira', 'lucasp', 'lucas@example.com', '123456', 'lucas.jpg', 'Produtor de eventos.');
+('Maria Eduarda', 'mariaeduarda', 'maria@gmail.com', '123456', 'maria.jpg', 'Amante de festas e eventos.'),
+('João Silva', 'joaosilva', 'joao@gmail.com', '123456', 'joao.jpg', 'Organizador de eventos.'),
+('Ana Paula', 'anapaula', 'ana@gmail.com', '123456', 'ana.jpg', 'Especialista em decoração de festas.'),
+('Carlos Mendes', 'carlosm', 'carlos@gmail.com', '123456', 'carlos.jpg', 'DJ profissional.'),
+('Fernanda Lima', 'fernandal', 'fernanda@gmail.com', '123456', 'fernanda.jpg', 'Fotógrafa de eventos.'),
+('Lucas Pereira', 'lucasp', 'lucas@gmail.com', '123456', 'lucas.jpg', 'Produtor de eventos.');
 
 
 INSERT INTO events (
