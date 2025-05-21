@@ -151,12 +151,12 @@ VALUES
 
 INSERT INTO users (name, username, email, senha, perfil_photo, bio)
 VALUES 
-('Maria Eduarda', 'mariaeduarda', 'maria@gmail.com', '123456', 'maria.jpg', 'Amante de festas e eventos.'),
-('João Silva', 'joaosilva', 'joao@gmail.com', '123456', 'joao.jpg', 'Organizador de eventos.'),
-('Ana Paula', 'anapaula', 'ana@gmail.com', '123456', 'ana.jpg', 'Especialista em decoração de festas.'),
-('Carlos Mendes', 'carlosm', 'carlos@gmail.com', '123456', 'carlos.jpg', 'DJ profissional.'),
-('Fernanda Lima', 'fernandal', 'fernanda@gmail.com', '123456', 'fernanda.jpg', 'Fotógrafa de eventos.'),
-('Lucas Pereira', 'lucasp', 'lucas@gmail.com', '123456', 'lucas.jpg', 'Produtor de eventos.');
+('Maria Eduarda', 'mariaeduarda', 'maria@gmail.com', '123456', 'https://img.freepik.com/fotos-gratis/mulher-bonita-celebrando-o-conceito-de-ano-novo_23-2148722189.jpg?semt=ais_hybrid&w=740', 'Amante de festas e eventos.'),
+('João Silva', 'joaosilva', 'joao@gmail.com', '123456', 'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg', 'Organizador de eventos.'),
+('Ana Paula', 'anapaula', 'ana@gmail.com', '123456', 'https://www.paraisodasfestas.com.br/wp-content/uploads/2024/05/gestao-de-eventos.jpg', 'Especialista em decoração de festas.'),
+('Carlos Mendes', 'carlosm', 'carlos@gmail.com', '123456', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKgxiPTwU8Gn-iWoQqFRPC69O9147iukCJg&s', 'DJ profissional.'),
+('Fernanda Lima', 'fernandal', 'fernanda@gmail.com', '123456', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', 'Fotógrafa de eventos.'),
+('Lucas Pereira', 'lucasp', 'lucas@gmail.com', '123456', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg', 'Produtor de eventos.');
 
 
 INSERT INTO events (
