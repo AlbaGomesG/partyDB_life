@@ -6,19 +6,21 @@ const getAllPosts = async (req, res) => {
         const posts = await postsModel.getPosts(name);
         res.status(200).json(posts);
     } catch (error) {
-        console.error("Erro ao buscar posts:", error); 
+
         res.status(500).json({ error: "Erro ao buscar posts!" });
     }
 };
 
 const getPost = async (req, res) => {
     try {
-        const post = await postsModel.getPostById(req.params.id);
+        const userId = req.user.id;
+        const post = await postsModel.getPostById(userId);
         if (!post) {
             return res.status(404).json({ message: "Post não encontrado!" });
         }
         res.json(post);
     } catch (error) {
+        console.error("Erro ao buscar o post:", error);
         res.status(500).json({ message: "Erro ao buscar o post!" });
     }
 };
@@ -31,6 +33,7 @@ const createPost = async (req, res) => {
         );
         res.status(201).json({ message: "Post criado com sucesso!", newPost });
     } catch (error) {
+        console.error("Erro ao criar o post:", error);
         res.status(500).json({ message: "Erro ao criar o post!" });
     }
 };
