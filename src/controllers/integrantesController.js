@@ -9,22 +9,24 @@ const getAllIntegrantes = async (req, res) => {
         res.status(500).json({ message: "Erro ao buscar integrantes!" });
     }
 };
+
 const getIntegrante = async (req, res) => {
     try {
         const integrante = await integrantesModel.getIntegranteById(req.params.id);
         if (!integrante) {
-            return res.status(404).json({ message: "Integrante não foi encontrado!" });
+            return res.status(404).json({ message: "Integrante nao foi encontrado!" });
         }
         res.json(integrante);
     } catch (error) {
         res.status(500).json({ message: "Erro ao buscar o integrante!" });
     }
 };
+
 const createIntegrante = async (req, res) => {
     try {
-        const { name, description } = req.body;
-        const integrante_photo = req.file ? req.file.filename : null;
-        const newIntegrante = await integrantesModel.createIntegrante(integrante_photo, name, description);
+        const { name, funcao_equipe } = req.body;
+        const photo_integrante = req.file ? req.file.filename : null;
+        const newIntegrante = await integrantesModel.createIntegrante(photo_integrante, name, funcao_equipe);
         res.status(201).json({ message: "Integrante criado com sucesso!", newIntegrante });
     } catch (error) {
         res.status(500).json({ message: "Erro ao criar o integrante!" });
@@ -33,10 +35,10 @@ const createIntegrante = async (req, res) => {
 
 const updateIntegrante = async (req, res) => {
     try {
-        const { name, description } = req.body;
-        const updateIntegrante = await integrantesModel.updateIntegrante(req.params.id, name, description);
+        const { name, funcao_equipe } = req.body;
+        const updateIntegrante = await integrantesModel.updateIntegrante(req.params.id, name, funcao_equipe);
         if (!updateIntegrante) {
-            return res.status(404).json({ message: "Integrante não foi encontrado!" });
+            return res.status(404).json({ message: "Integrante nao foi encontrado!" });
         }
         res.json({ message: "Integrante atualizado com sucesso!", updateIntegrante });
     } catch (error) {
