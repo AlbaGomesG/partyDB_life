@@ -14,20 +14,23 @@ const getAllPosts = async (req, res) => {
 const getPost = async (req, res) => {
     try {
         const userId = req.user.id;
-        const post = await postsModel.getPostById(userId);
-        if (!post) {
-            return res.status(404).json({ message: "Post não encontrado!" });
+        const post = await postsModel.getPostsById(userId);
+
+        if (post.length === 0) {
+            return res.status(404).json({ message: "Nenhum post encontrado!" });
         }
-        res.json(post);
+        res.status(200).json(post);
     } catch (error) {
         console.error("Erro ao buscar o post:", error);
         res.status(500).json({ message: "Erro ao buscar o post!" });
     }
 };
 
+
 const createPost = async (req, res) => {
     try {
-        const { user_id, event_id, image_post, content, data_postagem } = req.body;
+        const { user_id, event_id, content, data_postagem } = req.body;
+        const image_post = req.file ? req.file.filename : null;
         const newPost = await postsModel.createPost(
             user_id, event_id, image_post, content, data_postagem
         );
