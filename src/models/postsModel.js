@@ -10,13 +10,19 @@ const getPosts = async (name) => {
     }
 };
 
-const getPostById = async (id) => {
-    const result = await pool.query("SELECT * FROM posts WHERE id = $1", [id]);
-    return result.rows[0];
+const getPostsById = async (userId) => {
+        const result = await pool.query(
+        "SELECT * FROM posts WHERE user_id = $1",
+            [userId]
+        );
+        return result.rows; // retorna todos os posts, não só o primeiro
 };
 
 const createPost = async (user_id, event_id, image_post, content, data_postagem) => {
-    const result = await pool.query("INSERT INTO posts (user_id, event_id, image_post, content, data_postagem) VALUES ($1, $2, $3) RETURNING *", [user_id, event_id, image_post, content, data_postagem]);
+    const result = await pool.query(
+        "INSERT INTO posts (user_id, event_id, image_post, content, data_postagem) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+        [user_id, event_id, image_post, content, data_postagem]
+    );
     return result.rows[0];
 };
 
@@ -36,4 +42,4 @@ const deletePost = async (id) => {
     return { message: "Post deletado com sucesso!" };
 };              
 
-module.exports = { getPosts, getPostById, createPost, updatePost, deletePost };
+module.exports = { getPosts, getPostsById, createPost, updatePost, deletePost };
