@@ -15,7 +15,7 @@ const getPostsById = async (userId) => {
         "SELECT * FROM posts WHERE user_id = $1",
             [userId]
         );
-        return result.rows; // retorna todos os posts, não só o primeiro
+        return result.rows; 
 };
 
 const createPost = async (user_id, event_id, image_post, content, data_postagem) => {
