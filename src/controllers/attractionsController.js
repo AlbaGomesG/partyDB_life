@@ -42,13 +42,20 @@ const createAttraction = async (req, res) => {
 const updateAttraction = async (req, res) => {
     try {
         const { attractions_photo, name, description } = req.body;
-        const updateAttraction = await attractionsModel.updateAttraction(req.params.id, attractions_photo, name, description);
-        if (!updateAttraction) {
-        return res.status(404).json({ message: "Atração não foi encontrada!"});
+
+        if (!name || !description) {
+            return res.status(400).json({ message: "Nome e descrição são obrigatórios!" });
         }
-        res.json({ message: "Atração atualizada com sucesso!", updateAttraction});
+
+        const updatedAttraction = await attractionsModel.updateAttraction(req.params.id, attractions_photo, name, description);
+        if (!updatedAttraction) {
+            return res.status(404).json({ message: "Atração não foi encontrada!" });
+        }
+
+        res.json({ message: "Atração atualizada com sucesso!", updatedAttraction });
     } catch (error) {
-        res.status(500).json({ message: "Erro ao atualizar a atração!"});
+        console.error(error);
+        res.status(500).json({ message: "Erro ao atualizar a atração!", error: error.message });
     }
 };
 

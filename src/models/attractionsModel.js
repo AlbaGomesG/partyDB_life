@@ -20,11 +20,19 @@ const createAttraction = async (attractions_photo, name, description) => {
     return result.rows[0];
 };
 
-const updateAttraction = async (attractions_photo, name, description) => {
-    const result = await pool .query("UPDATE attractions SET name = $1, description = $2 WHERE id = $3 RETURNING *", [attractions_photo, name, description]);
+const updateAttraction = async (id, attractions_photo, name, description) => {
+    const query = `
+        UPDATE attractions
+        SET attractions_photo = $1, name = $2, description = $3
+        WHERE id = $4
+        RETURNING *;
+    `;
+    const values = [attractions_photo, name, description, id];
+    const result = await pool.query(query, values); 
     return result.rows[0];
 };
 
+module.exports = { updateAttraction };
 const deleteAttraction = async (id) => {
     const result = await pool.query("DELETE FROM attractions WHERE id = $1 RETURNING *", [id]);
     if (result.rowCount === 0) {
