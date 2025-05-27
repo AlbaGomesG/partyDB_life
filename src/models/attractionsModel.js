@@ -15,13 +15,13 @@ const getAttractionById = async (id) => {
     return result.rows[0];
 };
 
-const createAttraction = async (attraction_photo, name, description) => {
-    const result = await pool.query("INSERT INTO attractions (attraction_photo, name, description) VALUES ($1, $2, $3) RETURNING *", [attraction_photo, name, description]);
+const createAttraction = async (attractions_photo, name, description) => {
+    const result = await pool.query("INSERT INTO attractions (attractions_photo, name, description) VALUES ($1, $2, $3) RETURNING *", [attractions_photo, name, description]);
     return result.rows[0];
 };
 
-const updateAttraction = async (id, name, description) => {
-    const result = await pool .query("UPDATE attractions SET name = $1, description = $2 WHERE id = $3 RETURNING *", [name, description, id]);
+const updateAttraction = async (attractions_photo, name, description) => {
+    const result = await pool .query("UPDATE attractions SET name = $1, description = $2 WHERE id = $3 RETURNING *", [attractions_photo, name, description]);
     return result.rows[0];
 };
 

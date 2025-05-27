@@ -25,18 +25,24 @@ const getAttraction = async (req, res) => {
 const createAttraction = async (req, res) => {
     try {
         const { name, description } = req.body;
-        const attraction_photo = req.file ? req.file.filename : null;
-        const newAttraction = await attractionsModel.createAttraction(attraction_photo, name, description);
-        res.status(201).json({ message: "Atração criada com sucesso!", newAttraction});
+
+        if (!name || !description) {
+            return res.status(400).json({ message: "Nome e descrição são obrigatórios!" });
+        }
+
+        const attractions_photo = req.file ? req.file.filename : null;
+        const newAttraction = await attractionsModel.createAttraction(attractions_photo, name, description);
+        res.status(201).json({ message: "Atração criada com sucesso!", newAttraction });
     } catch (error) {
-        res.status(500).json({ message: "Erro ao criar a atração!"});
+        console.error(error);
+        res.status(500).json({ message: "Erro ao criar a atração!", error: error.message });
     }
 };
 
 const updateAttraction = async (req, res) => {
     try {
-        const { name, description } = req.body;
-        const updateAttraction = await attractionsModel.updateAttraction(req.params.id, name, description);
+        const { attractions_photo, name, description } = req.body;
+        const updateAttraction = await attractionsModel.updateAttraction(req.params.id, attractions_photo, name, description);
         if (!updateAttraction) {
         return res.status(404).json({ message: "Atração não foi encontrada!"});
         }
