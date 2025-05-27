@@ -15,9 +15,9 @@ const getEventById = async (id) => {
     return result.rows[0];
 };
 
-const createEvent = async (title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags) => {
-    const result = await pool.query(
-        "INSERT INTO events (title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
+const createEvent = async (title, place_id, attraction_id, style_id, time_start, time_end, description,event_photo, events_rules, party_itens, take_products, hashtags) => {
+        const result = await pool.query(
+        "INSERT INTO events (title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *",
         [title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags]
     );
     return result.rows[0];
