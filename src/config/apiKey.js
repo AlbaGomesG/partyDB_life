@@ -1,12 +1,12 @@
 const apiKeyMiddleware = (req, res, next) => {
-    const apiKey = req.headers['x-api-key']; 
-    const serverKey = process.env.API_KEY; 
+  const clientKey = req.headers['x-api-key'];
+  const serverKey = process.env.API_KEY;
 
-    if (!apiKey || apiKey !== serverKey) { 
-        return res.status(403).json({ error: 'Chave de API inválida ou ausente' });
-    }
+  if (!clientKey || clientKey !== serverKey) {
+    return res.status(403).json({ error: 'Chave de API inválida ou ausente' });
+  }
 
-    next(); 
+  next();
 };
 
 module.exports = apiKeyMiddleware;
