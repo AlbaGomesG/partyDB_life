@@ -5,8 +5,8 @@ const upload = require("../config/upload");
 
 router.get("/", stylesController.getAllStyles);
 router.get("/:id", stylesController.getStyle);
-router.post("/", upload.single("style_photo"), stylesController.createStyle);
-router.put("/:id", stylesController.updateStyle);
+router.post("/", upload.single("styles_photo"), stylesController.createStyle);
+router.put("/:id", upload.single("styles_photo"), stylesController.updateStyle);
 router.delete("/:id", stylesController.deleteStyle);
 
 module.exports = router;

@@ -24,21 +24,22 @@ const getPlace = async (req, res) => {
 
 const createPlace = async (req, res) => {
     try{
-        const { name, description, place_photo } = req.body;
-        const newPlace = await placesModel.createPlace(name, description, place_photo);
+        const { name, description, places_photo } = req.body; // Corrigido para places_photo
+        const newPlace = await placesModel.createPlace(name, description, places_photo); // Corrigido para places_photo
         res.status(201).json({ message: "Lugar criado com sucesso!", newPlace});
     } catch (error) {
+        console.error(error); 
         if (error.code === "23505") {
             return res.status(400).json({ message: "Esse lugar já existe no nosso sistema!"});
         }
-        res.status(404).json({ message: "Erro ao criar lugar!"});
+        res.status(404).json({ message: "Erro ao criar lugar!", error: error.message });
     }
 };
 
 const updatePlace = async (req, res) => {
     try{
-        const { description, place_photo} = req.body;
-        const updatePlace = await placesModel.updatePlace(req.params.id, description, place_photo);
+        const { description, places_photo } = req.body; // Corrigido para places_photo
+        const updatePlace = await placesModel.updatePlace(req.params.id, description, places_photo); // Corrigido para places_photo
         if (!updatePlace) {
             return res.status(404).json({ message: "Lugar não foi encontrado!"});
         }
