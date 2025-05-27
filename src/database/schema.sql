@@ -128,7 +128,7 @@ INSERT INTO styles (styles_photo, name, description) VALUES
 ('classical.jpg', 'Classica', 'Eventos com musica classica.'),
 ('funk.jpg', 'Funk', 'Festas animadas com os maiores nomes do funk.'),
 ('https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXLSWVU2dsqitQn%2BWsgbjJdryvvMevHDPS5UcB6A5xJVWPZr3BS3qbbMYKuuV0Yl40H39fczCwFie186n3%2FdesdSvEaWmOHS7QNmhK7oBFclc6p06NZf1NQE1SBkf9xtC8U6S5edEUDaPMSKCXEKOPdut4wCvlJXcAcCfTcicwgy0vtVLFKBjIM3AeOZruKHn1d67iDxCeHkEMLbNtrZ26xTbj9X2hbWBBV401eu9pi8eGm5pZfN5KsCBNVXrfSyFp4r0%2BN2gst39PBe43Kq7NI5fHRdWjKdD4MVpufYdTbqy2hPxb0tuursRbR26GZPVaCgL5G5vdwfgV1e5I6LvroGM1CuBUSHCy64EVCBu1LIWzzF2dNWPmSIwCo3rZc9y7nHWUOnDLem2RXNq9Rj6xY2B2xPZIq7yaZstKSjEdX2wjmx2JMkNF5%2B9us5wZ0D8yYBCUvuheEaT25gtECXKqzlF0jkwS93ZNdxfPD0kAVI6i%2BBJt6hX%2FFYQTyfwFf2JPiCpNIaQTo1gE5OawzQxb1IbPJrXuqdpBz1bsbkmHEqxgYxQkUzRF%2FSiCbPQU%3D&allow_caching=true&sz=w958-h944', 'Sertanejo', 'Eventos com shows sertanejos e clima de interior.'),
-('reggae.jpg', 'Reggae', 'Vibracoes positivas e muito reggae ao vivo.'),
+('https://sdmntprwestus.oaiusercontent.com/files/00000000-0044-6230-949c-f887021812da/raw?se=2025-05-27T12%3A40%3A19Z&sp=r&sv=2024-08-04&sr=b&scid=673aab31-993f-5344-a8f3-28bc0ac1079c&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-27T10%3A56%3A12Z&ske=2025-05-28T10%3A56%3A12Z&sks=b&skv=2024-08-04&sig=JewdovuKi0fXsttgHA0cwb26%2BYzo145XqJStVgNEpx4%3D', 'Reggae', 'Vibracoes positivas e muito reggae ao vivo.'),
 ('trap.jpg', 'Trap', 'Festas com beats pesados e artistas da cena trap.');
 
 INSERT INTO users (name, username, email, senha, perfil_photo, bio) VALUES
