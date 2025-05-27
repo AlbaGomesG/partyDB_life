@@ -121,13 +121,13 @@ INSERT INTO attractions (attractions_photo, name, description) VALUES
 
 INSERT INTO styles (styles_photo, name, description) VALUES
 ('electronic.jpg', 'Eletronica', 'Festas com musica eletronica.'),
-('rock.jpg', 'Rock', 'Eventos com bandas de rock ao vivo.'),
-('pop.jpg', 'Pop', 'Festas com hits do momento.'),
+('https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXXp2ir3CDwL5GzPQra0fZ2FT0o6RNBg8NGq9lpxmhipis%2BzauFS9N%2FX2MliFZE5sh0S6%2BM2d6Wt7mLATLAPcFOI7mOMWp9eKJwF2IzESfn8CaJwTpUtRi09UUCymtVKR6NB9leEM57Fbz4xU%2B%2F4oqWC9hUigJKNOMHFtMinZDjqDWnd618xKk99Fa2L2TVJ0vONn8EPUW5qWmRSlT8kcfDx8JanlmBJ6VUvx8ei81LW1r%2BINijHjoRh1BpJBjkkP7vbwUnjJiZ%2FFNkRRgnlgMTIZh3lddcrWM8QMfJ932RvHUqn74nLGFlxW%2FSqmGt6fp0EY8bSzJOESNRny6CtV5gfIILv95mEiTPWqCzqQv%2BCWvVWF6v9mKvTS%2BIB9RUQl9h5i7DNYTPbuTfFfdfY0XrbHg5pZ6IaaXHRIBJ1X0LTpSHX7cPj3xvStU4Lh0oyrQFAme8EzKTDzBO6uYMO1FbPLe8EmioC%2Bf1ClsCkngBlXGmhREkXTbb%2Faq2XMF%2BEWk3hYlYAhjjd1pusEie%2BEob0Il7Dy0AN8RhAXwRiQy1WDSBnpkq%2FZIP0AGv64s%3D&allow_caching=true&sz=w958-h944&auditContext=forDisplay', 'Rock', 'Eventos com bandas de rock ao vivo.'),
+('https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEX97E6SiQCeMWkHIIkMk6hTBK0gbvWYxX3hhizaHWE%2FwSxIFIRNJFBzzZVDW5nRGz4tuarAw7ggEj0r39lDAcVs9iWa8INJ0yg328%2FRRvoiYw8z0ChWFzB3nHOUj1HaoBns5WHReXDEf55EZey5JJebs104JZIBaoTlsM4apd0EloJ623ZHrH60KW%2Bt%2FNV7zG8LVB7%2Fll0DAa7Vx1jAZcwdCqEGZWXRlRg%2FsfHkWclR6WGqlZOltOywFpOEj4MfjpfPdKTZfkam5nJLZFvmFuw8p24%2F0VKfAfOTpArZX5HPxFP60WNdz9Lrcdvz5YTshd1tiKowzt4rCPJSOIVnGSP%2BFZV0xDbyhBr%2B2e%2B82O6RMJIOlhH20N%2BIGha3%2FH1bLGiT%2FkTy5J4Rm7nlL2N3vREz8s8PACak5je0ZSYXSZ7SHN2BodpyqHVETi0arOB%2BevSo6ezQhPYtnPlQVQ0yZjuTa%2FwRs7f0KycyeXGkPTY7ue5p2oGl7ikSkzrTAbislt9h9mjFO6VmINRJp7y5sMKFxb1b56raqGttnzDNj6q00T58l5mo189XXB2kYhpihw%3D%3D&allow_caching=true&sz=w958-h944', 'Pop', 'Festas com hits do momento.'),
 ('jazz.jpg', 'Jazz', 'Eventos com musica jazz ao vivo.'),
 ('hiphop.jpg', 'Hip-Hop', 'Festas com musica hip-hop e rap.'),
 ('classical.jpg', 'Classica', 'Eventos com musica classica.'),
 ('funk.jpg', 'Funk', 'Festas animadas com os maiores nomes do funk.'),
-('sertanejo.jpg', 'Sertanejo', 'Eventos com shows sertanejos e clima de interior.'),
+('https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXLSWVU2dsqitQn%2BWsgbjJdryvvMevHDPS5UcB6A5xJVWPZr3BS3qbbMYKuuV0Yl40H39fczCwFie186n3%2FdesdSvEaWmOHS7QNmhK7oBFclc6p06NZf1NQE1SBkf9xtC8U6S5edEUDaPMSKCXEKOPdut4wCvlJXcAcCfTcicwgy0vtVLFKBjIM3AeOZruKHn1d67iDxCeHkEMLbNtrZ26xTbj9X2hbWBBV401eu9pi8eGm5pZfN5KsCBNVXrfSyFp4r0%2BN2gst39PBe43Kq7NI5fHRdWjKdD4MVpufYdTbqy2hPxb0tuursRbR26GZPVaCgL5G5vdwfgV1e5I6LvroGM1CuBUSHCy64EVCBu1LIWzzF2dNWPmSIwCo3rZc9y7nHWUOnDLem2RXNq9Rj6xY2B2xPZIq7yaZstKSjEdX2wjmx2JMkNF5%2B9us5wZ0D8yYBCUvuheEaT25gtECXKqzlF0jkwS93ZNdxfPD0kAVI6i%2BBJt6hX%2FFYQTyfwFf2JPiCpNIaQTo1gE5OawzQxb1IbPJrXuqdpBz1bsbkmHEqxgYxQkUzRF%2FSiCbPQU%3D&allow_caching=true&sz=w958-h944', 'Sertanejo', 'Eventos com shows sertanejos e clima de interior.'),
 ('reggae.jpg', 'Reggae', 'Vibracoes positivas e muito reggae ao vivo.'),
 ('trap.jpg', 'Trap', 'Festas com beats pesados e artistas da cena trap.');
 
