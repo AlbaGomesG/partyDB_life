@@ -25,12 +25,11 @@ const createEvent = async (title, place_id, attraction_id, style_id, time_start,
 
 const updateEvent = async (id, title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags) => {
     const result = await pool.query(
-        "UPDATE events SET title = $1, place_id = $2, attraction_id = $3, style_id = $4, time_start = $5, time_end = $6, description = $7, event_photo = $8 WHERE id = $9 RETURNING *",
-        [title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags]
+        "UPDATE events SET title = $1, place_id = $2, attraction_id = $3, style_id = $4, time_start = $5, time_end = $6, description = $7, event_photo = $8, events_rules = $9, party_itens = $10, take_products = $11, hashtags = $12 WHERE id = $13 RETURNING *",
+        [title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags, id]
     );
     return result.rows[0];
 };
-
 const deleteEvent = async (id) => {
     const result = await pool.query("DELETE FROM events WHERE id = $1 RETURNING *", [id]);
     if (result.rowCount === 0) {

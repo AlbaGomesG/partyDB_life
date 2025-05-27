@@ -38,6 +38,9 @@ const createEvent = async (req, res) => {
 
 const updateEvent = async (req, res) => {
     try {
+        if (!req.body || Object.keys(req.body).length === 0) {
+            return res.status(400).json({ message: "Corpo da requisição vazio ou inválido!" });
+        }
         const { title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags } = req.body;
         const updateEvent = await eventsModel.updateEvent(
             req.params.id, title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags
@@ -47,9 +50,10 @@ const updateEvent = async (req, res) => {
         }
         res.json({ message: "Evento atualizado com sucesso!", updateEvent });
     } catch (error) {
+        console.error("Erro ao atualizar evento:", error); 
         res.status(500).json({ message: "Erro ao atualizar o evento!" });
     }
-};  
+};    
 
 const deleteEvent = async (req, res) => {
     try {

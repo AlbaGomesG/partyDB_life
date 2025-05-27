@@ -17,6 +17,7 @@ const apiKeyMiddleware = require ("./src/config/apiKey")
 const path = require("path");
 const app = express();
 
+app.use(apiKeyMiddleware)
 
 app.use(cors());
 app.use(express.json());
@@ -27,7 +28,6 @@ app.use("/api/attractions", attractionsRoutes);
 app.use("/api/integrantes", integrantesRoutes);
 app.use("/api/events", eventsRoutes);
 app.use("/api/posts", postsRoutes);
-app.use(apiKeyMiddleware)
 
 app.use("/api/styles", stylesRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));

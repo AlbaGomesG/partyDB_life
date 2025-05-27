@@ -1,9 +1,7 @@
 DROP DATABASE IF EXISTS partylife;
 CREATE DATABASE partylife WITH ENCODING 'UTF8';
 
-
 \c partylife;
-
 
 CREATE TABLE places (
     id SERIAL PRIMARY KEY,
@@ -12,14 +10,12 @@ CREATE TABLE places (
     places_photo TEXT
 );
 
-
 CREATE TABLE attractions (
     id SERIAL PRIMARY KEY,
     attractions_photo TEXT,
     name VARCHAR(255) NOT NULL,
     description TEXT
 );
-
 
 CREATE TABLE styles (
     id SERIAL PRIMARY KEY,
@@ -28,13 +24,12 @@ CREATE TABLE styles (
     description TEXT
 );
 
-
 CREATE TABLE events (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    place_id INTEGER REFERENCES places(id) ON DELETE SET NULL,
-    attraction_id INTEGER REFERENCES attractions(id) ON DELETE SET NULL,
-    style_id INTEGER REFERENCES styles(id) ON DELETE SET NULL,
+    place_id INTEGER NULL,
+    attraction_id INTEGER NULL,
+    style_id INTEGER NULL,
     time_start TIMESTAMP,
     time_end TIMESTAMP,
     description TEXT,
@@ -42,9 +37,11 @@ CREATE TABLE events (
     events_rules TEXT,
     party_itens TEXT,
     take_products TEXT,
-    hashtags TEXT
+    hashtags TEXT,
+    CONSTRAINT fk_event_place FOREIGN KEY (place_id) REFERENCES places(id) ON DELETE SET NULL,
+    CONSTRAINT fk_event_attraction FOREIGN KEY (attraction_id) REFERENCES attractions(id) ON DELETE SET NULL,
+    CONSTRAINT fk_event_style FOREIGN KEY (style_id) REFERENCES styles(id) ON DELETE SET NULL
 );
-
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -58,13 +55,14 @@ CREATE TABLE users (
 
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-    event_id INTEGER REFERENCES events(id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL,
+    event_id INTEGER NOT NULL,
     image_post TEXT NOT NULL,
     content VARCHAR(300) NOT NULL,
-    data_postagem DATE DEFAULT CURRENT_DATE
+    data_postagem DATE DEFAULT CURRENT_DATE,
+    CONSTRAINT fk_post_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    CONSTRAINT fk_post_event FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE
 );
-
 
 CREATE TABLE integrantes (
     id SERIAL PRIMARY KEY,
@@ -72,8 +70,6 @@ CREATE TABLE integrantes (
     name VARCHAR(255) NOT NULL,
     funcao_equipe VARCHAR(255) NOT NULL
 );
-
-
 
 INSERT INTO places (name, description, places_photo) VALUES
 ('Sunset Prive', 'Evento exclusivo com DJs renomados, open bar premium e vista para o por do sol.', 'https://example.com/sunset_prive.jpg'),
