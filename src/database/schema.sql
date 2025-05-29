@@ -49,7 +49,7 @@ INSERT INTO events (title, time_start, time_end, description, event_photo, event
 VALUES
 ('Sunset Prive', '2025-06-01 18:00:00', '2025-06-01 23:59:00',
  'Evento exclusivo com DJs renomados, open bar premium e vista para o por do sol.',
- 'https://example.com/sunset_prive.jpg',
+ 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEVGXnv73Kxl6wK4B3GL4H81Pce5PCwZSBm37AoM1bas77kpTBN935q1RLvx4QClHQKT6yy%2FZN6gyf0UqO3IPygIirFexQ4eHzIjO10ZseMr1a7dw1IOjOBKGe8OLXW4M4uU54tFWOJvHG%2BM8Ein7%2FaPJ9fdEfn2skt%2BdBt804TVP5jiMDsqbkBl0ldh8kCKkMZEBgGcJwGR3J73YpWqYXZF4E%2FRtj3a%2BUUW9BPb0EibM8VGe1WI3wLtLEHCYCvIObWLE68yQ0Q1EwI2BUSoUyLzr9Jo1Sl9TjCjpSAfBmQkJIEpjP2000rDHqqBsMpfatMzba%2BaVWQTDtQ3pOIwo33c7MbHhuyWkY9sHhe1nOsNJF%2BbVArWZgJamoR%2FA52%2FgRhyxYyQtwVRCUMUnio%2BjEoUaK6w%2BTDPDbntXAJsVtQ9URmNQkIHsNQUUGUQNrh2QrU1Q7KrAsdXTL6mASkF7lrBtkaQOVultGVIDV%2Fp5oWXdTTXIdiPzCyq2GFlkSRNK3Fwv2t6NbJvuhBnwBeDFGnLn4pWbHxpP1nWP0E2dTysRIMHftNQer7XPxnwUQeF&allow_caching=true&sz=w512-k',
  'Proibido entrar com bebidas externas. Respeitar a capacidade do local. Traje elegante.',
  'Open bar premium, DJs renomados, iluminacao especial.',
  'Bebidas alcoolicas, ingressos, brindes exclusivos.',
@@ -57,7 +57,7 @@ VALUES
 
 ('Noite Branca', '2025-06-15 22:00:00', '2025-06-16 03:00:00',
  'Uma noite all white com convidados selecionados, champagne e muita elegancia.',
- 'https://example.com/noite_branca.jpg',
+ 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEX32MPbv2QSEMPyRVNIXRnve%2FA%2FJQy9C98F17bSzAjPklmhxlbeVZ6xMTSR%2FcDjjv8IWXajEqT1kdZPYKRiFWubThf6bG7RkOln4TcvaKsFBxKqNMzjXm4OPwsREt%2Br3HDg%2B8Ei5gPyeDwtkfjZmAeMCuuH2hg5b0WC92lLsCcyO%2F7KAqLKr%2FDi6epyW1HnL4JnilDmB4iIiU61R9TYDz8H3eXQ4AXw%2FEyEHN9bwaY%2F7ErRd7oCAs3dL%2BF6bsMvx5qwZ%2F5WhkO1bvUWqSNetl5UL82c%2F6aFeAFib8GidLKwXtxOjB8cYf3aHO9LYY6gSC8SdXdmck3ANYfT7PAzJcUMzD%2FxprWV9JE0kSGidXqrNDkqFBuLyF88Z%2FAUN1xlY8PhKJBk4Ryr6wDy%2FS4OX0pYdzcDSr7lMfWoVSnI0KPjP1ROwpwQNqQct9NXF4KSIuTUBslZqhiVgCfE36zIAzg9m8QKLvdOLwUOi4wnv78Dy7LkR8ht%2BD9GMeOLhBz38cC8xdpYmA%2FVgPhC3NfuwdAhX1N0d6VFjTgJBE3vtuSZEAUzQqe8W7moZ7ykhAM%3D&allow_caching=true&sz=w1920-h945',
  'Traje branco obrigatorio. Proibido entrada de menores. Capacidade limitada.',
  'Champagne, decoracao all white, iluminacao sofisticada.',
  'Ingressos VIP, champagne premium, pulseiras de acesso.',
@@ -65,7 +65,7 @@ VALUES
 
 ('Garden Secret', '2025-06-20 19:00:00', '2025-06-20 23:00:00',
  'Coquetel privado em um jardim secreto, com finger foods e jazz ao vivo.',
- 'https://example.com/garden_secret.jpg',
+ 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXO0u%2FTSK6Y1iHCvQ0z%2FDlMy1ouzH6XXRz72kbC1eNOimn0SR%2FaaMnysv4jvBqeOTFl9COD8HQlFblgRFLrTYQL1ZOV5IFM0jwmmrKk%2B3QZ2QCn623caORDyphgqtN65I1wjcqJLmOSoxMtWvUF5Z80u%2F0%2Bxo38fWcqEBHb2%2BAKjJ3WKcKxtsq%2BRy3RTv2mXymXg2t3pWpKyLku1Z2nCWPUaM75U1HhtpGW49sgMngXUI8%2FYCmJ57m7qca4Gpfj5AXS8ZttaHzCZlPnFxlwhabiMZYkKKlWVKn%2FHbYVTZySz%2FgV8bM8bVjMbiAgwNYMnDyZBne1vcX7rUb1NCHxDr5RL9BzTW3gn6UTZ8OhA2dKvFNX2nutQY7RyY6uSnze7E1iUyjzxtyA8jfx2a2d3Y6cmGUuokyIZ9d2Jxr7eONxT%2BgjSH713AnkWN3ClKmrvCn9Zll0sBFErFUCrMM9rApoPaVCUcBKNcF%2F3ri8bv1WnVQrawEWlJgoPyZvZDCNMtl8YK79RG2M5CDS7U5cZiy%2FrljTx9E35QATuLjw6%2Baupk1jk758V08JUBCHk4DA&allow_caching=true&sz=w1920-h945',
  'Evento fechado. Proibido a entrada de cameras e gravacoes. Nao sera permitido o consumo de alimentos de fora.',
  'Finger foods gourmet, decoracao rustica, jazz ao vivo.',
  'Ingressos VIP, cardapios exclusivos, coqueteis personalizados.',
