@@ -39,15 +39,14 @@ CREATE TABLE posts (
 );
 
 INSERT INTO users (name, username, email, senha, perfil_photo, bio) VALUES
-('Lucas Pereira', '@menorKabrinha', 'lucaspereira@gmail.com', '123456', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg', 'Produtor de eventos.');
+('Lucas Pereira', '@menorKabrinha', 'lucaspereira@gmail.com', '123456', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg', 'Produtor de eventos.'),
 ('Julia River', '@juliariver', 'juliariver@gmail.com', '123456', 'https://img.freepik.com/fotos-gratis/mulher-bonita-celebrando-o-conceito-de-ano-novo_23-2148722189.jpg', 'Amante de festas e eventos.'),
 ('Livia Angelotti', '@angelotti', 'liviangelotti@gmail.com', '123456', 'https://www.paraisodasfestas.com.br/wp-content/uploads/2024/05/gestao-de-eventos.jpg', 'Amante de festas e eventos.'),
-('Julia Mines', '@jujumines', 'jujumines@gmail.com', '123456', 'https://i.pinimg.com/736x/d9/08/91/d90891acd96959d790807a4a9b983663.jpg', 'Amante de festas e eventos.')
+('Julia Mines', '@jujumines', 'jujumines@gmail.com', '123456', 'https://i.pinimg.com/736x/d9/08/91/d90891acd96959d790807a4a9b983663.jpg', 'Amante de festas e eventos.'),
 ('Kauã Lopez', '@xrcz', 'kaualopez@gmail.com', '123456', 'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg', 'Organizador de eventos.'),
 ('Gabriel Pereira', '@gp', 'gabrielpereira@gmail.com', '123456', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKgxiPTwU8Gn-iWoQqFRPC69O9147iukCJg', 'DJ profissional.'),
-('Caio Vieira', '@cabezinho', '123456', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg', 'Produtor de Eventos.')
+('Caio Vieira', '@cabezinho', 'caiovieira@gmail.com', '123456', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg', 'Produtor de Eventos.'),
 ('Ju Santos', '@jusantos', 'juliasantos@gmail.com', '123456', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', 'Amante de festas e eventos.');
-
 
 INSERT INTO events (title, local, time_start, time_end, event_photo, description, events_rules, party_itens, take_products, hashtags)
 VALUES
@@ -67,14 +66,15 @@ VALUES
 
  ('Encontro de Carros', 'Pista do CKP', '2025-05-09 20:00:00', '2025-05-10 02:00:00','/images/bannerCorrida.jpeg', 'Prepare-se para um evento que vai acelerar seu coração! Neste final de semana, os motores vão roncar alto no Encontro de Carros mais esperado da região! Clássicos, esportivos, antigos, rebaixados e modificados - todos reunidos em um só lugar para celebrar a paixão automotiva.', 'Proibido animais. Som automotivo controlado. Proibido o uso de bebidas alcoólicas por motoristas. Respeito ao espaço alheio. Lixo no lixo!. Menores de idade apenas com acompanhante.', 'Área de som automotivo. Sorteios e brindes. Concursos de destaques.', 'Caixa térmica com água e bebida. Dinhero ou cartão para consumação no local. Câmera ou celular carregado. Documento do veículo e CNH em dia. Boa atitude e respeito.', 'PartyLife2025, EncontroCarros, Automotivos, VemPraLuz');
 
+
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
 VALUES
-(1, 1, '/images/raveFestFeed.jpg', 'Rave do Menor, São Paulo', '' ),
-(2, 2, '/images/beachFeed.jpg', 'Praia do Leme, Rio de Janeiro', ''),
-(3, 3, '/images/poolPartyFeed.jpg', 'Pool Party, São Paulo', ''),
-(4, 4, '/images/resenhaFeed.jpg', 'Casa da Juju, São Paulo', ''),
-(5, 5, '/images/car1.jpg', 'Pista do Tigre, São Paulo', ''),
-(6, 6, '/images/corridaPost.jpg', 'Pista do Tigre, São Paulo', ''),
-(7, 7, '/images/beachPost.jpg', 'Pista do Tigre, São Paulo', ''),
-(8, 8, '/images/ravePost.jpg', 'Rave da Ju, São Paulo', '');
+(1, 1, '/images/raveFestFeed.jpg', 'Rave do Menor, São Paulo', CURRENT_DATE),
+(2, 2, '/images/beachFeed.jpg', 'Praia do Leme, Rio de Janeiro', CURRENT_DATE),
+(3, 3, '/images/poolPartyFeed.jpg', 'Pool Party, São Paulo', CURRENT_DATE),
+(4, 4, '/images/resenhaFeed.jpg', 'Casa da Juju, São Paulo', CURRENT_DATE),
+(5, 5, '/images/car1.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
+(6, 6, '/images/corridaPost.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
+(7, 7, '/images/beachPost.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
+(8, 8, '/images/ravePost.jpg', 'Rave da Ju, São Paulo', CURRENT_DATE);
 
