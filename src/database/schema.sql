@@ -212,24 +212,5 @@ VALUES
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
 VALUES
-(1, 1, 'maria_festa.jpg', 'A melhor festa da praia!', '2025-06-22'),
-(2, 2, 'joao_festival.jpg', 'Festival de rock incrivel!', '2025-07-20'),
-(3, 3, 'ana_noite.jpg', 'Noite eletronica perfeita!', '2025-08-10'),
-(4, 4, 'carlos_jazz.jpg', 'Jazz ao por do sol e tudo!', '2025-09-05'),
-(5, 5, 'fernanda_karaoke.jpg', 'Karaoke night foi demais!', '2025-10-12'),
-(6, 6, 'lucas_cobertura.jpg', 'Festa na cobertura com vista incrivel!', '2025-11-18'),
-(1, 7, 'maria_rooftop.jpg', 'Vista incrivel no rooftop!', '2025-12-01'),
-(2, 8, 'joao_rodeio.jpg', 'Rodeio de Americana foi epico!', '2025-12-05'),
-(3, 9, 'ana_neon.jpg', 'Luzes neon incriveis!', '2025-12-10'),
-(4, 10, 'carlos_tropical.jpg', 'Festival tropical cheio de energia!', '2025-12-15'),
-(5, 11, 'fernanda_lounge.jpg', 'Ambiente perfeito no lounge VIP.', '2025-12-20'),
-(6, 12, 'lucas_underwater.jpg', 'Festa subaquatica surreal!', '2025-12-25'),
-(1, 13, 'maria_masquerade.jpg', 'Baile de mascaras elegante!', '2026-01-01'),
-(2, 14, 'joao_rooftop.jpg', 'Festa no topo da cidade!', '2026-01-05'),
-(3, 15, 'ana_jungle.jpg', 'Festa na selva foi incrivel!', '2026-01-10'),
-(4, 16, 'carlos_secret.jpg', 'Evento secreto inesquecivel!', '2026-01-15'),
-(5, 17, 'fernanda_neon.jpg', 'Luzes neon e muita musica!', '2026-01-20'),
-(6, 18, 'lucas_glamour.jpg', 'Noite glamourosa com estilo!', '2026-01-25'),
-(1, 19, 'maria_cosmic.jpg', 'Viagem cosmica incrivel!', '2026-01-30'),
-(2, 20, 'joao_carnaval.jpg', 'Carnaval Prive foi sensacional!', '2026-02-05');
+=()
 
