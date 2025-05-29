@@ -38,12 +38,15 @@ CREATE TABLE posts (
 );
 
 INSERT INTO users (name, username, email, senha, perfil_photo, bio) VALUES
-('Maria Eduarda', 'mariaeduarda', 'maria@gmail.com', '123456', 'https://img.freepik.com/fotos-gratis/mulher-bonita-celebrando-o-conceito-de-ano-novo_23-2148722189.jpg', 'Amante de festas e eventos.'),
-('Joao Silva', 'joaosilva', 'joao@gmail.com', '123456', 'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg', 'Organizador de eventos.'),
-('Ana Paula', 'anapaula', 'ana@gmail.com', '123456', 'https://www.paraisodasfestas.com.br/wp-content/uploads/2024/05/gestao-de-eventos.jpg', 'Especialista em decoracao de festas.'),
-('Carlos Mendes', 'carlosm', 'carlos@gmail.com', '123456', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKgxiPTwU8Gn-iWoQqFRPC69O9147iukCJg', 'DJ profissional.'),
-('Fernanda Lima', 'fernandal', 'fernanda@gmail.com', '123456', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', 'Fotografa de eventos.'),
-('Lucas Pereira', 'lucasp', 'lucas@gmail.com', '123456', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg', 'Produtor de eventos.');
+('Lucas Pereira', '@menorKabrinha', 'lucaspereira@gmail.com', '123456', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg', 'Produtor de eventos.');
+('Julia River', '@juliariver', 'juliariver@gmail.com', '123456', 'https://img.freepik.com/fotos-gratis/mulher-bonita-celebrando-o-conceito-de-ano-novo_23-2148722189.jpg', 'Amante de festas e eventos.'),
+('Livia Angelotti', '@angelotti', 'liviangelotti@gmail.com', '123456', 'https://www.paraisodasfestas.com.br/wp-content/uploads/2024/05/gestao-de-eventos.jpg', 'Amante de festas e eventos.'),
+('Julia Mines', '@jujumines', 'jujumines@gmail.com', '123456', 'https://i.pinimg.com/736x/d9/08/91/d90891acd96959d790807a4a9b983663.jpg', 'Amante de festas e eventos.')
+('Kauã Lopez', '@xrcz', 'kaualopez@gmail.com', '123456', 'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg', 'Organizador de eventos.'),
+('Gabriel Pereira', '@gp', 'gabrielpereira@gmail.com', '123456', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKgxiPTwU8Gn-iWoQqFRPC69O9147iukCJg', 'DJ profissional.'),
+('Caio Vieira', '@cabezinho', '123456', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg', 'Produtor de Eventos.')
+('Ju Santos', '@jusantos', 'juliasantos@gmail.com', '123456', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', 'Amante de festas e eventos.');
+
 
 INSERT INTO events (title, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags)
 VALUES
@@ -73,7 +76,7 @@ VALUES
 
 ('Vibes Select', '2025-06-25 22:00:00', '2025-06-26 04:00:00',
  'Festa fechada com line-up especial e acesso restrito para convidados.',
- 'https://example.com/vibes_select.jpg',
+ 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEVKb4tF33VPMiODQsp1pMBd%2FRHHho4QTnUEYlRBdHYQKATXp2ndl6qE2K%2Fd2UwTcLuE0ufXothJAlTFLsf8yr7DEIaQWhX3v1L4Wi%2FFMGZ5vdwDrJSl2gjLczhCtrIahDHkfxJ2B4EX469eTqoi%2BP9fB5tx83ixzKVpQDmDRfP1XFodgB6zaFaGXdS%2BP17r1YTyXZF8jwYM4618ZiXaGZvUjbApaDZXeRP4uRRBfW4wUHqhxF38eBuW%2B%2FmRLg8%2Fwcsv3iPrTFxOulWVwaGbWtEb2ZIOGX9pqlimsxhAobxTEImg9X3Jk5hX9D4AMUGe0ui0XYA3Y0Brxctcl5FufgFMoibQux7bwtGqlz8OFoYRC%2BOrOhM5yTTt%2BetQlKdqH6MylmmNSuoQHLHGCdGvG9OJrZ5DUBRcKEwjEd7%2BG%2Br3vjx9OE%2Fo1LQ7K3aEScmMd2mqjsGEY4qZFO3KMeoGVOHEvJ7vLcSUUDmS72stGSPmdh0x6G1QozbpOF8cJj9XoyNARc0yIkFAlko5KiY%2B2Zk%2Fj%2FhYvaZeomIdo4wj3duaXr8n0EQrX9oKT7WLqoM%3D&allow_caching=true&sz=w512-k',
  'Evento exclusivo para convidados. E proibido a entrada de cameras profissionais. Traje de festa.',
  'DJs renomados, pista de danca iluminada, visual inovador.',
  'Ingressos VIP, bebidas exclusivas, catering personalizado.',
@@ -83,7 +86,7 @@ VALUES
  'Sunrise party para um grupo seleto, com cafe da manha gourmet e musica chill.',
  'https://example.com/aurora_exclusive.jpg',
  'Proibido entrar com bebidas nao alcoolicas. Respeitar o horario do evento. Traje confortavel.',
- 'Cafe da manha gourmet, ambiente chill, musica suave ao amanhecer.',
+ 'Cafe da manha gourmet, ambiente chill, musica suave ao amanhecer.',,
  'Bebidas premium, cardapio exclusivo, ingressos para o evento VIP.',
  '#AuroraExclusive #SunriseParty #ChillVibes #GourmetExperience'),
 
