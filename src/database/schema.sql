@@ -69,5 +69,12 @@ VALUES
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
 VALUES
-=()
+(1, 1, '/images/raveFestFeed.jpg', 'Rave do Menor, São Paulo', '' ),
+(2, 2, '/images/beachFeed.jpg', 'Praia do Leme, Rio de Janeiro', ''),
+(3, 3, '/images/poolPartyFeed.jpg', 'Pool Party, São Paulo', ''),
+(4, 4, '/images/resenhaFeed.jpg', 'Casa da Juju, São Paulo', ''),
+(5, 5, '/images/car1.jpg', 'Pista do Tigre, São Paulo', ''),
+(6, 6, '/images/corridaPost.jpg', 'Pista do Tigre, São Paulo', ''),
+(7, 7, '/images/beachPost.jpg', 'Pista do Tigre, São Paulo', ''),
+(8, 8, '/images/ravePost.jpg', 'Rave da Ju, São Paulo', '');
 
