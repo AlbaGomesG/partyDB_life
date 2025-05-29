@@ -8,13 +8,11 @@ const authRoutes = require("./src/routes/authRoutes");
 const pool = require("./src/config/database");
 const eventsRoutes = require("./src/routes/eventsRoutes");
 const postsRoutes = require("./src/routes/postsRoutes");
-const apiKeyMiddleware = require ("./src/config/apiKey")
 
 
 const path = require("path");
 const app = express();
 
-app.use(apiKeyMiddleware)
 
 app.use(cors());
 app.use(express.json());
