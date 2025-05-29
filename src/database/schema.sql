@@ -7,14 +7,14 @@ CREATE TABLE events (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     local VARCHAR(255) NOT NULL,
-    time_start TIMESTAMP,
-    time_end TIMESTAMP,
-    event_photo TEXT,
-    description TEXT,
-    events_rules TEXT,
-    party_itens TEXT,
-    take_products TEXT,
-    hashtags TEXT
+    time_start TIMESTAMP NOT NULL,
+    time_end TIMESTAMP NOT NULL,
+    event_photo TEXT NOT NULL,
+    description TEXT NOT NULL,
+    events_rules TEXT NOT NULL,
+    party_itens TEXT NOT NULL,
+    take_products TEXT NOT NULL,
+    hashtags TEXT NOT NULL
 );
 
 CREATE TABLE users (
@@ -84,4 +84,3 @@ VALUES
 (6, 6, '/images/corridaPost.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
 (7, 7, '/images/beachPost.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
 (8, 8, '/images/ravePost.jpg', 'Rave da Ju, São Paulo', CURRENT_DATE);
-
