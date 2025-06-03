@@ -5,18 +5,13 @@ CREATE DATABASE partylife WITH ENCODING 'UTF8';
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
+    perfil_photo TEXT NOT NULL,
     name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(100) NOT NULL, 
 );
 
-CREATE TRIGGER after_user_insert
-AFTER INSERT ON users
-FOR EACH ROW
-BEGIN
-    INSERT INTO usersInfo (user_id, info1, info2, info3) 
-    VALUES (NEW.id, NULL, NULL, NULL);
-END;
 
 CREATE TABLE events (
     id SERIAL PRIMARY KEY,
@@ -152,11 +147,12 @@ VALUES
 '2025-07-30 18:00:00', 
 '2025-07-31 02:00:00',
 '/uploads/summerNightBanner.jpeg', 
-'A festa mais esperada do verão carioca! Venha curtir o pôr do sol com os pés na areia, música eletrônica, drinks refrescantes e uma vibe incrível!', 
+'A festa mais esperada do verão carioca! Venha curtir o pôr do sol com os pés na areia, música sertaneja, drinks refrescantes e uma vibe incrível!', 
 'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Não é permitido entrar com bebidas. Use pulseira de identificação o tempo todo.', 
-'DJ sets ao vivo. Espaço com food trucks e drinks refrescantes.', 
+'Sets ao vivo. Espaço com food trucks e drinks refrescantes.', 
 'Roupa tropical ou look de verão. Protetor solar. Documento com foto. Muita energia e disposição para dançar até o amanhecer!',
-
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRip_WAtSyjK8pknSQdJtIN4fFV27eBtoTSjQ&s, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDs0TWTOyBQP_i3VWHbMHAeOSkSKE7_Cuuow&s',
+'Diego e Victor Hugo, Danilo e Davi'
 'PartyLife2025, #SummerNightParty, #PéNaAreia, #VemProLuz'),
 
 ('Silent Party', 
