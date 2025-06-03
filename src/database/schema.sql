@@ -10,9 +10,8 @@ CREATE TABLE users (
     name VARCHAR(100) NOT NULL,
     username VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    senha VARCHAR(100) NOT NULL, 
+    senha VARCHAR(100) NOT NULL
 );
-
 
 CREATE TABLE events (
     id SERIAL PRIMARY KEY,
@@ -43,15 +42,15 @@ CREATE TABLE posts (
     CONSTRAINT fk_post_event FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE
 );
 
-INSERT INTO users (name, username, email, senha, perfil_photo, bio) VALUES
-('Lucas Pereira', '@menorKabrinha', 'lucaspereira@gmail.com', '123456', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg', 'Produtor de eventos.'),
-('Julia River', '@juliariver', 'juliariver@gmail.com', '123456', 'https://img.freepik.com/fotos-gratis/mulher-bonita-celebrando-o-conceito-de-ano-novo_23-2148722189.jpg', 'Amante de festas e eventos.'),
-('Livia Angelotti', '@angelotti', 'liviangelotti@gmail.com', '123456', 'https://www.paraisodasfestas.com.br/wp-content/uploads/2024/05/gestao-de-eventos.jpg', 'Amante de festas e eventos.'),
-('Julia Mines', '@jujumines', 'jujumines@gmail.com', '123456', 'https://i.pinimg.com/736x/d9/08/91/d90891acd96959d790807a4a9b983663.jpg', 'Amante de festas e eventos.'),
-('Kauã Lopez', '@xrcz', 'kaualopez@gmail.com', '123456', 'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg', 'Organizador de eventos.'),
-('Gabriel Pereira', '@gp', 'gabrielpereira@gmail.com', '123456', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKgxiPTwU8Gn-iWoQqFRPC69O9147iukCJg', 'DJ profissional.'),
-('Caio Vieira', '@cabezinho', 'caiovieira@gmail.com', '123456', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg', 'Produtor de Eventos.'),
-('Ju Santos', '@jusantos', 'juliasantos@gmail.com', '123456', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', 'Amante de festas e eventos.');
+INSERT INTO users (name, username, email, senha, perfil_photo) VALUES
+('Lucas Pereira', '@menorKabrinha', 'lucaspereira@gmail.com', '123456', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg'),
+('Julia River', '@juliariver', 'juliariver@gmail.com', '123456', 'https://img.freepik.com/fotos-gratis/mulher-bonita-celebrando-o-conceito-de-ano-novo_23-2148722189.jpg'),
+('Livia Angelotti', '@angelotti', 'liviangelotti@gmail.com', '123456', 'https://www.paraisodasfestas.com.br/wp-content/uploads/2024/05/gestao-de-eventos.jpg'),
+('Julia Mines', '@jujumines', 'jujumines@gmail.com', '123456', 'https://i.pinimg.com/736x/d9/08/91/d90891acd96959d790807a4a9b983663.jpg'),
+('Kauã Lopez', '@xrcz', 'kaualopez@gmail.com', '123456', 'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg'),
+('Gabriel Pereira', '@gp', 'gabrielpereira@gmail.com', '123456', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKgxiPTwU8Gn-iWoQqFRPC69O9147iukCJg'),
+('Caio Vieira', '@cabezinho', 'caiovieira@gmail.com', '123456', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg'),
+('Ju Santos', '@jusantos', 'juliasantos@gmail.com', '123456', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg');
 
 INSERT INTO events (title, local, time_start, time_end, event_photo, description, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags)
 VALUES
@@ -67,7 +66,7 @@ VALUES
 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/11/alok-3-e1732129463931.jpg?w=1200&h=675&crop=1, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpEZcgpTIGlCIoPV_ixuxtT4vfBdnWx0SAcBYkarbKRRzKNvPs8NsQ9q4tZ0Q1pB-tU04&usqp=CAU, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Qq4m_6hqEf6UMIVfADRv1kaOoQI-sKmGMB64ChpGqVrE6ztzrI0AelBNwkjvn_vtCoE&usqp=CAU',
 'Alok, Matue, Wiu',
 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEUraSd4hQR9MMQktAskC0McWBqey8iYgJqpTL99T3UzDbaKAq3YZ0kM%2BWA0afDi41tBio%2BGN9qlYEbSdnD6Ukgu%2BkY0bSqZOK10phsFoztX9hVB7BIyTmsEeBLNy7nKS97LVJU4Ku8cN96Q%2FYX71IPUvkosZ8pD2%2FFl3757tbc7hkHYeBVgNF2adg5vO9q5yDGcd6wPF7DQECjkCDtNcfmI99Is4DHURqbW2iBwyKIpzfIVj0f6ifB3jve7OzzZDLmS1Ztht2myLqrD4RJLIaFk5mIAZLspIJ2tOEGeY1566ugAzhcOZWZgjpkjuk4AdWgt0JDeKZyt1qFpZ4EsTvTEapAP0sOmhYnfFtWCfUwMNaOeJ3YfBAkKEMMbfY%2B3PTy6qrk%2B8PtF9SJXbjlAIWp9BPqB0qx28EpiHvdeDS189r5DsaUoyz%2B1CMKXGp0kbDmBrB%2Ba%2BEAWYG7DZvGtwtU%2FIrGud0eHUhfurmj7FS7LjTLyJ06fI4n8sEkgq9MeN3X6sLvoZISmnC8iVF8iQRTU5bp9Y%2BcZw0J7tOpHUs5A2RxeS2M%2FIU9c0mUD74k%3D&allow_caching=true&sz=w1920-h945, https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEVv3PCObw%2B5ejHbV%2BmyLsQZ9ippGTIw0dARqTsDpjMoTDNkRsiwmGEJdKi7AeKExuFXH2NWPaoJHbwfPN73HR2LQbn9hLkwd2%2FGh7lN0cS7v0fEkr12Qi0DZwoDyWx5Iyf2NB7anVh5Q0%2FG5oe9%2FzA%2BU1P0WR3PLguY7KZgjYPeMlRKGOLhvmv9cWEPI0kwF8qlo3TAGS4mtSVyp1X53xU%2FZYFU5%2F98FygckBGXsoFnEIhVt2HPt7TC2c%2FKx6FrEhC90w3HLpBrzLWKSanGtR%2FcopM%2B2pztRRd7UYmLNtb%2FK1MiwbU8JGJdnvh8iPh6EfpG0kDUibmbQ9ZpLiqUrMUWctsnxQoOrJY07LZnC178tBrn8XVdDccg%2B1JsjMVqjobklrd4Rmkdh8CKYZjq%2FcBOisrH7POyqY3BMKU%2FJ%2FeBfJXbqmbeU192kepbzATLgsYA1HCZW4Rg9TG0m9leOulUfXb7TyKJEVJA5NK2upT4lLMiuLtOhNM4MRzDg%2B68%2BNeEkJNB1BscV2lwBSgjs561oFQMUP8qmWkT8OcQq3nLLQ22JeQEpz%2FNb2ycFEQA&allow_caching=true&sz=w1920-h945',
-'Eletrônica, Trap' 
+'Eletrônica, Trap',
 'PartyLife2025, #RaveFest, #Coloridos, #VemPraLuz'),
 
 ('Praia da Vila', 
@@ -112,7 +111,7 @@ VALUES
 'https://www.jornaldorap.com.br/wp-content/uploads/2021/06/mc-don-juan.jpg, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQERSsCQpClBvMXmUC7zhsWUlwDz1rfyicVQ&s, https://dicionariompb.com.br/wp-content/uploads/2022/12/mc-cabelinho.jpeg, https://static.ndmais.com.br/2020/01/LIVINHO-1-site-800x705.jpg',
 'Mc Don Juan, Mc Cabelinho, Mc Livinho',
 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXStomk3gBQTTRUmv6gKweMdQFUPAWDw3XvzpCf9Va8LUsoc1Mw%2Bw8HuDO0N67wrivBHjt54D5okKlsHiPOZpmos%2Fr2LkPcfY7NkiI60HGs3p9HvXMgq6tGVBl5QQaJeeGmRVgGbYEH6dHWPtCtNp7UU%2F3%2FvQB9iH0dEiL8g99xEZ2CvWQt2tn6aTq11NiIrvINl7wPHHFn4o%2BD%2BbotvPu%2Bsb%2BFPSrlCdC0uzXuqsDb2vzgZGYl%2B66RzrdDgFR6wVYrukIA4SmfSAaL5tcWeCSQAlTnV93sw%2FfRKNMe1kRDnbx%2B82G05l1paBUWpwz3cwwAeLwYz2nrS8vMsMAPN6UgoD6GsW4epQN6FW2qYTQnCsMS6bmX1gIBBKtIsFTPqW8Maza3w4Z5mDb38VFkAGU3QMqooVGjE%2B0AkC%2BnOPGpR7%2FfUsgJkEVkWLi%2F3DOgc9k4lVw3yoiR467MjODoSRkKuhbxawxOhkTBkgMvQQiqg9fn1r4al8Za8iDW%2B1mbcPWIkiDMcCosz1arR3pL2Bj89rUqWK%2FWvbQcL9%2FqEg%2F6IejUF%2B08qvsaYFTcvhs3HTg%3D&allow_caching=true&sz=w1920-h945',
-'Funk'
+'Funk',
 'PartyLife2025, FestaEmCasa, VibeBoa, VemPraLuz'),
 
 ('Encontro de Carros', 
@@ -123,12 +122,12 @@ VALUES
 'Prepare-se para um evento que vai acelerar seu coração! Neste final de semana, os motores vão roncar alto no Encontro de Carros mais esperado da região! Clássicos, esportivos, antigos, rebaixados e modificados - todos reunidos em um só lugar para celebrar a paixão automotiva.', 
 'Proibido animais. Som automotivo controlado. Proibido o uso de bebidas alcoólicas por motoristas. Respeito ao espaço alheio. Lixo no lixo!. Menores de idade apenas com acompanhante.', 
 'Área de som automotivo. Sorteios e brindes. Concursos de destaques.', 
-'Caixa térmica com água e bebida. Dinhero ou cartão para consumação no local. Câmera ou celular carregado. Documento do veículo e CNH em dia. Boa atitude e respeito.', 
+'Caixa térmica com água e bebida. Dinheiro ou cartão para consumação no local. Câmera ou celular carregado. Documento do veículo e CNH em dia. Boa atitude e respeito.', 
 'https://api.dialbrasil.com.br/webroot/files/Contents/image_medium_name/20241113124206Capital-Inicial-anuncia-turne-comemorativa-de-25-anos-do-album-Acustico-MTV-Capital-Inicial.png, https://s2-oglobo.glbimg.com/qztHlcKm8seMyAMhHyq2qvuvuek=/0x0:1920x1963/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2022/5/C/XKzJrOSZCl2KcRm7eKMw/101513171-sc-os-paralamas-do-sucesso-o-fotografo-e-dj-mauricio-valladares-e-o-empresario-jose-fort.jpg', 
 'Capital Inicial, Paralamas do Sucesso',
 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEWlWcWvtyMFYdgA38dSvPpkhrURJS7Yjh8gMTYGYhGNHkBbOsklI7ytAS7ZJZv1AJe7m%2F8BpB9C%2BQorIXb7M%2F8Y8SOZvXTzLPw7xkGWH4ekiZhT65SfZUNQZ%2BL451cdwA7eQXUCtivtMkosCA9WAk6glTtO95KrLbjqCKznRn9oxor8Gg1xon2FdB5ZR9SZzvFZPLpBo%2BoManFvm6BzQC8so2jJIgjpQbx5oxAcclbvtvQaBB4aZulJAFVzJMpM8NId8OnZkX8%2FgQfYVcEKlf2tLfd8waTRxXfztqFqC86TBQyPny50mb4Rtdeb%2FoHrTi%2BmaW0gweO2RxhlUHlXU%2B0r15YhsVWF9bSPLihcLARmk3Ue5KBa%2FwMwEu1K0oUZcsZhqWGlE1YAqtimVPIKEk22GvNktUsjpjg6nPE2bAS3vLQwXgS93zw5AbEWbiC%2FLBFN7q9ntrmzUk6z%2FpGb%2FRrokiTxHGaD2%2Bg5dhKJZVEEiSYTK5vt556EEeOT6zN15Ohrzsn8ofRdGMdZ8o1FLMoixf83g2fYaTW603jJudkzbDatxY2A9bjyvsWgCfPfuHZ7&allow_caching=true&sz=w1920-h945',
 'Rock',
-'PartyLife2025, EncontroCarros, Automotivos, VemPraLuz');
+'PartyLife2025, EncontroCarros, Automotivos, VemPraLuz'),
 
 ('Palazzo Friday', 
 'Palazzo Club', 
@@ -139,8 +138,10 @@ VALUES
 'Som automotivo liberado apenas em área específica. Proibido correr dentro do espaço do evento. Documento com foto obrigatório para entrada. Proibido o uso de drogas e atitudes agressivas', 
 'Line-up de DJs eletrônicos. Exposição de carros esportivos e clássicos. Sorteios de brindes automotivos. Área de food trucks com opções variadas.',
 'Documento com foto (RG, CNH ou versão digital – obrigatório para entrada). Dinheiro ou cartão para consumo no local. Roupa confortável e vibe acelerada!.', 
-'https://f.i.uol.com.br/fotografia/2020/12/03/16070249525fc94138cbe92_1607024952_1x1_md.jpg, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe3SukW-zbElHADY1rdtpDgH9aGHzmWNI8fQ&s ',
-'Bruno Martini, Eli Iwasa '
+'https://f.i.uol.com.br/fotografia/2020/12/03/16070249525fc94138cbe92_1607024952_1x1_md.jpg, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe3SukW-zbElHADY1rdtpDgH9aGHzmWNI8fQ&s',
+'Bruno Martini, Eli Iwasa',
+'',
+'Eletrônica',
 'PartyLife2025, #PalazzoFriday, #NoiteInesquecivel, #VemProLuz'),
 
 ('Summer Night Party',
@@ -153,7 +154,9 @@ VALUES
 'Sets ao vivo. Espaço com food trucks e drinks refrescantes.', 
 'Roupa tropical ou look de verão. Protetor solar. Documento com foto. Muita energia e disposição para dançar até o amanhecer!',
 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRip_WAtSyjK8pknSQdJtIN4fFV27eBtoTSjQ&s, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDs0TWTOyBQP_i3VWHbMHAeOSkSKE7_Cuuow&s',
-'Diego e Victor Hugo, Danilo e Davi'
+'Diego e Victor Hugo, Danilo e Davi',
+'',
+'Sertanejo',
 'PartyLife2025, #SummerNightParty, #PéNaAreia, #VemProLuz'),
 
 ('Silent Party', 
@@ -162,9 +165,7 @@ VALUES
 '2025-08-16 05:00:00',
 '/uploads/silentPartyBanner.jpeg', 
 'A festa onde o silencio fala alto! Dance ao som da sua propria musica com fones de ouvido sem fio enquanto desfruta de um ambiente incrivel.', 
-'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 
-'Escolha você mesmo seu cantor e estilo favorito',
-'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
+'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
 
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
