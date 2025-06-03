@@ -1,7 +1,7 @@
 const multer = require("multer");
 const path = require("path");
 
-// Pasta onde as imagens serão salvas
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "uploads/");
