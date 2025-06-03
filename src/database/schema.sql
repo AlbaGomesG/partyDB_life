@@ -165,10 +165,15 @@ VALUES
 '2025-08-16 05:00:00',
 '/uploads/silentPartyBanner.jpeg', 
 'A festa onde o silencio fala alto! Dance ao som da sua propria musica com fones de ouvido sem fio enquanto desfruta de um ambiente incrivel.', 
-'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 
-'Curta a festa com seus proprios cantores e estilos musicais favorios!'
+'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 
+'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 
+'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 
+'Curta a festa com seus proprios cantores e estilos musicais favorios!', 
+NULL,
+NULL,
+NULL,
+NULL,
 'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
-
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
 VALUES
