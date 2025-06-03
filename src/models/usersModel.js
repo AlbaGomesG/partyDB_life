@@ -16,17 +16,17 @@ const getUserById = async (userId) => {
     return result.rows[0];
 };
 
-const createUser = async (name, username, email, senha, perfil_photo, bio) => {
+const createUser = async (name, username, email, senha, perfil_photo) => {
     const hashedPassword = await bcrypt.hash(senha, 10);
     const result = await pool.query(
-        "INSERT INTO users (name, username, email, senha, perfil_photo, bio) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-        [name, username, email, hashedPassword, perfil_photo, bio]
+        "INSERT INTO users (name, username, email, senha, perfil_photo) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+        [name, username, email, hashedPassword, perfil_photo]
     );
     return result.rows[0];
 };
 
-const updateUser = async (id, name, username, bio) => {
-    const result = await pool.query("UPDATE users SET name = $1, username = $2, bio = $3 WHERE id = $4 RETURNING *", [name, username, bio, id]);
+const updateUser = async (id, name, username) => {
+    const result = await pool.query("UPDATE users SET name = $1, username = $2 WHERE id = $3 RETURNING *", [name, username, id]);
     return result.rows[0];
 }
 
@@ -38,4 +38,4 @@ const deleteUser = async (id) => {
     return {message: "Usuário deletado com sucesso!"};
 };
 
-module.exports = {getUsers, getUserById, createUser, updateUser, updateUser, deleteUser};
+module.exports = {getUsers, getUserById, createUser, updateUser, deleteUser};
