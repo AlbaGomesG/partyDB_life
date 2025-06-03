@@ -15,7 +15,9 @@ CREATE TABLE events (
     party_itens TEXT NOT NULL,
     take_products TEXT NOT NULL,
     attractions TEXT,
+    attractions_name TEXT,
     styles TEXT,    
+    styles_name TEXT,
     hashtags TEXT NOT NULL
 );
 
@@ -50,7 +52,7 @@ INSERT INTO users (name, username, email, senha, perfil_photo, bio) VALUES
 ('Caio Vieira', '@cabezinho', 'caiovieira@gmail.com', '123456', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg', 'Produtor de Eventos.'),
 ('Ju Santos', '@jusantos', 'juliasantos@gmail.com', '123456', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', 'Amante de festas e eventos.');
 
-INSERT INTO events (title, local, time_start, time_end, event_photo, description, events_rules, party_itens, take_products, hashtags)
+INSERT INTO events (title, local, time_start, time_end, event_photo, description, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags)
 VALUES
 ('Rave da Cor', 'Nova Holanda', '2025-06-24 17:00:00', '2025-06-25 04:00:00','/uploads/raveBanner.png', 'Prepare-se para uma noite insana de batidas eletrônicas, luzes psicodélicas e muita energia! DJs renomados, open bar selecionado e uma vibe que vai até o amanhecer. Vista-se com cores neon e venha brilhar na pista!', 'Respeito é essencial – atitudes racistas, homofóbicas ou violentas resultarão em expulsão. Som externo é proibido - DJs oficiais garantem a música. Use pulseira de identificação o tempo todo. Não é permitido entrar com bebidas – teremos open bar e vendas no local. Preserve a praia - Lixo no lixo. Curta com consciência – se beber, não dirija.', 'Line-up de DJs insanos com os melhores nomes do eletrônico, trance e tech house. Open bar premium (em algumas áreas) e drinks exclusivos. Show de laser, fumaça e efeitos especiais.',
  'Protetor solar (se a festa for ao ar livre durante o dia). Documento com foto (RG, CNH ou versão digital – obrigatório para entrada). Óculos escuros. Ingresso/Pulseira (digital ou física, se for o caso). Boa vibe e disposição pra dançar até o fim!',

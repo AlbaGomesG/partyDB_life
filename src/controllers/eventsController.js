@@ -25,9 +25,9 @@ const getEvent = async (req, res) => {
 
 const createEvent = async (req, res) => {
     try {
-        const { title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo,  events_rules, party_itens, take_products, hashtags } = req.body;
+        const { title, local, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags } = req.body;
         const newEvent = await eventsModel.createEvent(
-            title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags
+            title, local, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags
         );
         res.status(201).json({ message: "Evento criado com sucesso!", newEvent });
     } catch (error) {
@@ -41,9 +41,9 @@ const updateEvent = async (req, res) => {
         if (!req.body || Object.keys(req.body).length === 0) {
             return res.status(400).json({ message: "Corpo da requisição vazio ou inválido!" });
         }
-        const { title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags } = req.body;
+        const { title, local, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags } = req.body;
         const updateEvent = await eventsModel.updateEvent(
-            req.params.id, title, place_id, attraction_id, style_id, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, hashtags
+            req.params.id, title, local, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags
         );
         if (!updateEvent) {
             return res.status(404).json({ message: "Evento não foi encontrado!" });
