@@ -140,7 +140,7 @@ VALUES
 'Documento com foto (RG, CNH ou versão digital – obrigatório para entrada). Dinheiro ou cartão para consumo no local. Roupa confortável e vibe acelerada!.', 
 'https://f.i.uol.com.br/fotografia/2020/12/03/16070249525fc94138cbe92_1607024952_1x1_md.jpg, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe3SukW-zbElHADY1rdtpDgH9aGHzmWNI8fQ&s',
 'Bruno Martini, Eli Iwasa',
-'',
+'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEWq3NkA7eU8Yw%2FRJA6xAgGO0d97PgoLy5s0HNY1GeB6VIF3nV4KXaEx4eFHCMuGWWxnv2VGkxg30aeDC8ifhd0xhrZU10rzX2W0O03eg6ZRagCmmlJcDThY4sHA9jU0Ik8SrTYo3Y34SsM9x13zi1z2Dn5H8i8O5DeVrrcf15SOouuknkdUrkrqUSrKXE4wfutPG4MFe8P1FSawyKAuwDwdo2Wix2lOIJVmPA49C3LkbnVapUHDP2msSTf0zrxQqW83VfM8QWyztzVEiR8dDLyZDuLQIoytJhHAHKqRtJBrMfPWilh9ScVFQvnsw%2B1hOxWIgHUgqvgi9hNaMgN7DgA6im4%2FFjKqL1H09Z8n78ZwTHYEA7islEr1olrt%2F14WldroSFPc1L7NuOsaPmntXB6d%2F6pqrIx5IUpdTy5aOFD5e%2B%2BiPrqx0pV%2FxAzNSB028gR5hK%2B%2BmXURRVH2zNvkj%2F0CbtwFjFzCKwcS9hJrJSJhCsddTlBC5WQDXIC7XaC89B0r5gelLu81MiU7DfnjAFRPcl0yQjl7mOeg4GDizWwhUQoQlkWrR1Vlna6LcmvhjywPzw%3D%3D&allow_caching=true&sz=w1920-h889',
 'Eletrônica',
 'PartyLife2025, #PalazzoFriday, #NoiteInesquecivel, #VemProLuz'),
 
@@ -155,7 +155,7 @@ VALUES
 'Roupa tropical ou look de verão. Protetor solar. Documento com foto. Muita energia e disposição para dançar até o amanhecer!',
 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRip_WAtSyjK8pknSQdJtIN4fFV27eBtoTSjQ&s, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDs0TWTOyBQP_i3VWHbMHAeOSkSKE7_Cuuow&s',
 'Diego e Victor Hugo, Danilo e Davi',
-'',
+'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEWcSvzZJ%2BNudu%2FNPBhZB7bGgh0GQv%2Bex%2FLdgiCHcsazGR%2FlzNZkOalDx07mKnBF%2B2NDbY5hOlmZmxU32E3IAzR%2FynBFLn%2BQlcagtZuW3U16Pqq4FCz5aDpnltgTRsNhGiq7LgsWnD3ThtL%2BeUjjY1Ca4OhhA%2F6ia173MoKXl1ADZw2wFQ3%2B8QAkVnl6yTmZEd9XUecmvjV6D4R2m9p3oGQosKjfiPgRAbPjdvyLFX9nkp617%2Fh0%2FmJD3dbWqxrwMP1qGAoUZpaMEBTjXtRifNzmSwWw%2B8K%2FXcWS%2BckEmqXb%2B55vdEA3rH4%2BtR7R13ZEK0UOejJm0wwN0tp8U58PZZMJ5qTJkgRO%2FqJDiScH8Re1BVpPmtN3%2FXsSkcWPvsZpu%2ByZUhGQc3SGBpez5ySUZbNl7FOcvqtU7XTBpEw85%2BvtiUR0pNqTo7Qtim2naOogD%2FxcLs6w%2FmaaNeHdfJuvPwcI9kzkMFV4RhoAt43FeuHYVIQCggISrPZ1PTC17POvTvXELF1vM0W8FB9prmXSFOYLtqUnq2c115rQD1Nw8iiJBSDu2zjdD0Yd69nmy55%2BRg%3D%3D&allow_caching=true&sz=w1920-h889',
 'Sertanejo',
 'PartyLife2025, #SummerNightParty, #PéNaAreia, #VemProLuz'),
 
@@ -165,7 +165,9 @@ VALUES
 '2025-08-16 05:00:00',
 '/uploads/silentPartyBanner.jpeg', 
 'A festa onde o silencio fala alto! Dance ao som da sua propria musica com fones de ouvido sem fio enquanto desfruta de um ambiente incrivel.', 
-'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
+'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 
+'Curta a festa com seus proprios cantores e estilos musicais favorios!'
+'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
 
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
