@@ -3,6 +3,7 @@ CREATE DATABASE partylife WITH ENCODING 'UTF8';
 
 \c partylife;
 
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     perfil_photo TEXT NOT NULL,
@@ -95,7 +96,7 @@ VALUES
 'Protetor solar - sol nao perdoa!. Roupa de banho (biquini, sunga ou maio). Oculos de sol estiloso. Cartao ou dinheiro para consumo no local. Boa vibe e disposicao para dancar e se molhar!',
 'https://www.bandab.com.br/wp-content/uploads/2023/05/menos-e-mais-em-curitiba-foto-Jhonnathas-Franco-960x592.jpg.webp',
 'Menos é Mais',
-'',
+'https://sdmntprwestcentralus.oaiusercontent.com/files/00000000-84bc-61fb-87c0-e0d013550254/raw?se=2025-06-03T17%3A15%3A56Z&sp=r&sv=2024-08-04&sr=b&scid=16f65e5d-86d8-506f-8148-c6714c4f011d&skoid=b64a43d9-3512-45c2-98b4-dea55d094240&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-03T10%3A56%3A18Z&ske=2025-06-04T10%3A56%3A18Z&sks=b&skv=2024-08-04&sig=YKNKJ%2BAZctc1ZSeFh0DvvCsk9x%2BzWl%2BYWgOLLfmJBZ4%3D',
 'Pagode',
 'PartyLife2025, PoolParty, Molhados, VemPraLuz'),
 
@@ -161,7 +162,9 @@ VALUES
 '2025-08-16 05:00:00',
 '/uploads/silentPartyBanner.jpeg', 
 'A festa onde o silencio fala alto! Dance ao som da sua propria musica com fones de ouvido sem fio enquanto desfruta de um ambiente incrivel.', 
-'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
+'Permitido apenas maiores de 18 anos. Documento com foto obrigatório para entrada. Nao e permitido entrar com bebidas. Use pulseira de identificacao o tempo todo. E proibido compartilhar fones de ouvido. Respeito ao ambiente e aos demais convidados.', 'DJ ao vivo. Espaço com food trucks e drinks refrescantes. Área lounge e iluminacao LED interativa.', 'Roupa confortavel e vibe descontraida. RG ou documento digital. Fones(seram fornecidos no local). Muita energia e disposicao para dancar até o amanhecer!', 
+'Escolha você mesmo seu cantor e estilo favorito',
+'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
 
 
 INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
