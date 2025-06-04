@@ -25,8 +25,7 @@ const getUser = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
-    const{ name, username, email, senha} = req.body;
-    const perfil_photo = req.file ? req.file.filename : null;
+    const{ name, email, senha} = req.body;
 
     try {
       const check = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
@@ -35,7 +34,7 @@ const createUser = async (req, res) => {
     }
 
 
-    const newUser = await userModel.createUser(name, username, email, senha, perfil_photo);
+    const newUser = await userModel.createUser(name, email, senha);
     res.status(201).json(newUser);
     } catch (error) {
         console.error('Erro ao registrar usuário:', error);
@@ -46,8 +45,8 @@ const createUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
     try {
-        const { name, username} = req.body;
-        const updateUser = await userModel.updateUser(req.params.id, name, username);
+        const { name } = req.body;
+        const updateUser = await userModel.updateUser(req.params.id, name);
         if (!updateUser) {
             return res.status(404).json({ message: "Usuário não foi encontrado!"});
         }

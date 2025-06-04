@@ -16,17 +16,17 @@ const getUserById = async (userId) => {
     return result.rows[0];
 };
 
-const createUser = async (name, username, email, senha, perfil_photo) => {
+const createUser = async (name, email, senha) => {
     const hashedPassword = await bcrypt.hash(senha, 10);
     const result = await pool.query(
-        "INSERT INTO users (name, username, email, senha, perfil_photo) VALUES ($1, $2, $3, $4, $5) RETURNING *",
-        [name, username, email, hashedPassword, perfil_photo]
+        "INSERT INTO users (name, email, senha) VALUES ($1, $2, $3) RETURNING *",
+        [name, email, hashedPassword ]
     );
     return result.rows[0];
 };
 
-const updateUser = async (id, name, username) => {
-    const result = await pool.query("UPDATE users SET name = $1, username = $2 WHERE id = $3 RETURNING *", [name, username, id]);
+const updateUser = async (id, name) => {
+    const result = await pool.query("UPDATE users SET name = $1, WHERE id = $3 RETURNING *", [name, id]);
     return result.rows[0];
 }
 
