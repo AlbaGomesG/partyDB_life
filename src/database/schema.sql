@@ -6,12 +6,30 @@ CREATE DATABASE partylife WITH ENCODING 'UTF8';
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    perfil_photo TEXT NOT NULL,
     name VARCHAR(100) NOT NULL,
-    username VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE users_info (
+    id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+    name VARCHAR(100) NOT NULL,
+    bio TEXT
+);
+
+CREATE OR REPLACE FUNCTION insert_users_info()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO users_info (id, name, bio)
+    VALUES (NEW.id, NEW.name, NULL); 
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER after_user_insert
+AFTER INSERT ON users
+FOR EACH ROW
+EXECUTE FUNCTION insert_users_info();
 
 CREATE TABLE events (
     id SERIAL PRIMARY KEY,

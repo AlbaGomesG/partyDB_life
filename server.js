@@ -8,6 +8,7 @@ const authRoutes = require("./src/routes/authRoutes");
 const pool = require("./src/config/database");
 const eventsRoutes = require("./src/routes/eventsRoutes");
 const postsRoutes = require("./src/routes/postsRoutes");
+const usersInfoRoutes = require("./src/routes/userInfosRoutes");
 
 
 const path = require("path");
@@ -21,6 +22,7 @@ app.use("/api/users", usersRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventsRoutes);
 app.use("/api/posts", postsRoutes);
+app.use("/api/users_info", usersInfoRoutes);
 
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
