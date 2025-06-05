@@ -37,6 +37,7 @@ const createEvent = async (req, res) => {
 };
 
 const updateEvent = async (req, res) => {
+    console.log("req.body:", req.body); 
     try {
         if (!req.body || Object.keys(req.body).length === 0) {
             return res.status(400).json({ message: "Corpo da requisição vazio ou inválido!" });
