@@ -16,7 +16,7 @@ const getUserById = async (userId) => {
     return result.rows[0];
 };
 
-const createUser = async (name, username, email, senha, perfil_photo) => {
+const createUser = async (name, perfil_photo, username, email, senha) => {
     const hashedPassword = await bcrypt.hash(senha, 10);
     const result = await pool.query(
         "INSERT INTO users (name, perfil_photo, username, email, senha) VALUES ($1, $2, $3, $4, $5) RETURNING *",
