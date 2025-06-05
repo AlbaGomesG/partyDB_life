@@ -15,6 +15,8 @@ const login = async (req, res) => {
 
         const user = result.rows[0];
 
+        console.log('Usuário encontrado:', user);
+
         const isValid = await bcrypt.compare(senha, user.senha);
         if (!isValid) {
             return res.status(401).json({ message: 'Senha incorreta' });
