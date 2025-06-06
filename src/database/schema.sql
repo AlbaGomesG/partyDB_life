@@ -64,13 +64,13 @@ CREATE TABLE posts (
 
 INSERT INTO users (name, perfil_photo, username, email, senha) VALUES
 ('Lucas Pereira', 'https://lets.events/blog/wp-content/uploads/2017/05/saiba-quais-sao-as-principais-competencias-de-um-produtor-de-eventos.jpeg', '@menorKabrinha', 'lucaspereira@gmail.com', '123456'),
-('Julia River', 'https://img.freepik.com/fotos-gratis/mulher-bonita-celebrando-o-conceito-de-ano-novo_23-2148722189.jpg', '@juliariver', 'juliariver@gmail.com', '123456'),
+('Julia River', 'https://i.pinimg.com/736x/cd/e8/e0/cde8e058f48e591e1d4e8fe9c2fbc0af.jpg', '@juliariver', 'juliariver@gmail.com', '123456'),
 ('Livia Angelotti',  'https://www.paraisodasfestas.com.br/wp-content/uploads/2024/05/gestao-de-eventos.jpg', '@angelotti', 'liviangelotti@gmail.com', '123456'),
-('Julia Mines', '@jujumines', 'jujumines@gmail.com', '123456', 'https://i.pinimg.com/736x/d9/08/91/d90891acd96959d790807a4a9b983663.jpg'),
-('Kauã Lopez',  'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg', '@xrcz', 'kaualopez@gmail.com', '123456'),
+('Julia Mines', 'https://i.pinimg.com/736x/d9/08/91/d90891acd96959d790807a4a9b983663.jpg', '@jujumines', 'jujumines@gmail.com', '123456'),
+('Kauã Lopez', 'https://ampliar.org.br/wp-content/uploads/2021/04/aumenta-a-procura-de-cursos-online-durante-a-pandemia.jpg', '@xrcz', 'kaualopez@gmail.com', '123456'),
 ('Gabriel Pereira', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKgxiPTwU8Gn-iWoQqFRPC69O9147iukCJg', '@gp', 'gabrielpereira@gmail.com', '123456'),
 ('Caio Vieira', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg', '@cabezinho', 'caiovieira@gmail.com', '123456'),
-('Ju Santos', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', '@jusantos', 'juliasantos@gmail.com', '123456');
+('Juliana Santos', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', '@jusantos', 'julianasantos@gmail.com', '123456');
 
 INSERT INTO events (title, local, time_start, time_end, event_photo, description, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags)
 VALUES
