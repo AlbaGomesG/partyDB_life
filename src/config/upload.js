@@ -1,12 +1,14 @@
 const multer = require("multer");
 const path = require("path");
 
+console.log("Configuração do multer iniciada");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "uploads/");
     },
     filename: (req, file, cb) => {
+        console.log("Arquivo recebido:", file.originalname);
         const uniqueName = Date.now() + "-" + file.originalname;
         cb(null, uniqueName);
     },
