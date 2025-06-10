@@ -3,7 +3,6 @@ CREATE DATABASE partylife WITH ENCODING 'UTF8';
 
 \c partylife;
 
-
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     perfil_photo TEXT NOT NULL,
@@ -39,7 +38,7 @@ CREATE TABLE events (
     local VARCHAR(255) NOT NULL,
     time_start TIMESTAMP NOT NULL,
     time_end TIMESTAMP NOT NULL,
-    event_photo TEXT NOT NULL,
+    photo TEXT,
     description TEXT NOT NULL,
     events_rules TEXT NOT NULL,
     party_itens TEXT NOT NULL,
@@ -74,7 +73,7 @@ INSERT INTO users (name, perfil_photo, username, email, senha) VALUES
 ('Caio Vieira', 'https://i.pinimg.com/736x/1e/42/2f/1e422fafeef7bd5917b07012b8831a6c.jpg', '@cabezinho', 'caiovieira@gmail.com', '123456'),
 ('Juliana Santos', 'https://st4.depositphotos.com/13194036/22991/i/450/depositphotos_229919408-stock-photo-beautiful-young-woman-using-photo.jpg', '@jusantos', 'julianasantos@gmail.com', '123456');
 
-INSERT INTO events (title, local, time_start, time_end, event_photo, description, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags)
+INSERT INTO events (title, local, time_start, time_end, photo, description, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags)
 VALUES
 ('Rave da Cor', 
 'Nova Holanda', 
@@ -88,8 +87,8 @@ VALUES
 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/11/alok-3-e1732129463931.jpg?w=1200&h=675&crop=1, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpEZcgpTIGlCIoPV_ixuxtT4vfBdnWx0SAcBYkarbKRRzKNvPs8NsQ9q4tZ0Q1pB-tU04&usqp=CAU',
 'Alok, Matue',
 'https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEUraSd4hQR9MMQktAskC0McWBqey8iYgJqpTL99T3UzDbaKAq3YZ0kM%2BWA0afDi41tBio%2BGN9qlYEbSdnD6Ukgu%2BkY0bSqZOK10phsFoztX9hVB7BIyTmsEeBLNy7nKS97LVJU4Ku8cN96Q%2FYX71IPUvkosZ8pD2%2FFl3757tbc7hkHYeBVgNF2adg5vO9q5yDGcd6wPF7DQECjkCDtNcfmI99Is4DHURqbW2iBwyKIpzfIVj0f6ifB3jve7OzzZDLmS1Ztht2myLqrD4RJLIaFk5mIAZLspIJ2tOEGeY1566ugAzhcOZWZgjpkjuk4AdWgt0JDeKZyt1qFpZ4EsTvTEapAP0sOmhYnfFtWCfUwMNaOeJ3YfBAkKEMMbfY%2B3PTy6qrk%2B8PtF9SJXbjlAIWp9BPqB0qx28EpiHvdeDS189r5DsaUoyz%2B1CMKXGp0kbDmBrB%2Ba%2BEAWYG7DZvGtwtU%2FIrGud0eHUhfurmj7FS7LjTLyJ06fI4n8sEkgq9MeN3X6sLvoZISmnC8iVF8iQRTU5bp9Y%2BcZw0J7tOpHUs5A2RxeS2M%2FIU9c0mUD74k%3D&allow_caching=true&sz=w1920-h945, https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEVv3PCObw%2B5ejHbV%2BmyLsQZ9ippGTIw0dARqTsDpjMoTDNkRsiwmGEJdKi7AeKExuFXH2NWPaoJHbwfPN73HR2LQbn9hLkwd2%2FGh7lN0cS7v0fEkr12Qi0DZwoDyWx5Iyf2NB7anVh5Q0%2FG5oe9%2FzA%2BU1P0WR3PLguY7KZgjYPeMlRKGOLhvmv9cWEPI0kwF8qlo3TAGS4mtSVyp1X53xU%2FZYFU5%2F98FygckBGXsoFnEIhVt2HPt7TC2c%2FKx6FrEhC90w3HLpBrzLWKSanGtR%2FcopM%2B2pztRRd7UYmLNtb%2FK1MiwbU8JGJdnvh8iPh6EfpG0kDUibmbQ9ZpLiqUrMUWctsnxQoOrJY07LZnC178tBrn8XVdDccg%2B1JsjMVqjobklrd4Rmkdh8CKYZjq%2FcBOisrH7POyqY3BMKU%2FJ%2FeBfJXbqmbeU192kepbzATLgsYA1HCZW4Rg9TG0m9leOulUfXb7TyKJEVJA5NK2upT4lLMiuLtOhNM4MRzDg%2B68%2BNeEkJNB1BscV2lwBSgjs561oFQMUP8qmWkT8OcQq3nLLQ22JeQEpz%2FNb2ycFEQA&allow_caching=true&sz=w1920-h945',
-'Eletrônica, Trap',
-'PartyLife2025, #RaveFest, #Coloridos, #VemPraLuz'),
+'Trap, Eletrônica',
+'#PartyLife2025, #RaveFest, #Coloridos, #VemPraLuz'),
 
 ('Praia da Vila', 
 'Praia da Vila', 

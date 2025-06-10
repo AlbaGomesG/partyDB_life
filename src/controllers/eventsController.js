@@ -25,9 +25,16 @@ const getEvent = async (req, res) => {
 
 const createEvent = async (req, res) => {
     try {
-        const { title, local, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags } = req.body;
+        const { title, local, time_start, time_end, description, events_rules, party_itens, take_products, attractions_name, styles_name, hashtags } = req.body;
+        const photo = req.files && req.files['photo'] ? req.files['photo'][0].filename : null;
+        const attractions = req.files && req.files['attractions'] ? req.files['attractions'][0].filename : null;
+        const styles = req.files && req.files['styles'] ? req.files['styles'][0].filename : null;
+        console.log('photo:', photo);
+        console.log("attractions:", attractions);
+        console.log("styles:", styles);
+
         const newEvent = await eventsModel.createEvent(
-            title, local, time_start, time_end, description, event_photo, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags
+            title, local, time_start, time_end, photo, description, events_rules, party_itens, take_products, attractions, attractions_name, styles, styles_name, hashtags
         );
         res.status(201).json({ message: "Evento criado com sucesso!", newEvent });
     } catch (error) {
