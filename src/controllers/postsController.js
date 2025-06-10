@@ -29,10 +29,10 @@ const getPost = async (req, res) => {
 
 const createPost = async (req, res) => {
     try {
-        const { user_id, event_id, content, data_postagem } = req.body;
+        const { user_id, event_id, content, local ,data_postagem, horario } = req.body;
         const image_post = req.file ? req.file.filename : null;
         const newPost = await postsModel.createPost(
-            user_id, event_id, image_post, content, data_postagem
+            user_id, event_id, image_post, content, local, data_postagem, horario
         );
         res.status(201).json({ message: "Post criado com sucesso!", newPost });
     } catch (error) {
@@ -43,9 +43,9 @@ const createPost = async (req, res) => {
 
 const updatePost = async (req, res) => {
     try {
-        const { user_id, event_id, image_post, content, data_postagem } = req.body;
+        const { user_id, event_id, image_post, content, local, data_postagem, horario } = req.body;
         const updatePost = await postsModel.updatePost(
-            req.params.id, user_id, event_id, image_post, content, data_postagem
+            req.params.id, user_id, event_id, image_post, content, local ,data_postagem, horario
         );
         if (!updatePost) {
             return res.status(404).json({ message: "Post não foi encontrado!" });

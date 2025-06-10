@@ -18,18 +18,18 @@ const getPostsById = async (userId) => {
         return result.rows; 
 };
 
-const createPost = async (user_id, event_id, image_post, content, data_postagem) => {
+const createPost = async (user_id, event_id, image_post, content, local, data_postagem, horario) => {
     const result = await pool.query(
-        "INSERT INTO posts (user_id, event_id, image_post, content, data_postagem) VALUES ($1, $2, $3, $4, $5) RETURNING *",
-        [user_id, event_id, image_post, content, data_postagem]
+        "INSERT INTO posts (user_id, event_id, image_post, content, local, data_postagem, horario) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+        [user_id, event_id, image_post, content, local, data_postagem, horario]
     );
     return result.rows[0];
 };
 
-const updatePost = async (id, user_id, event_id, image_post, content, data_postagem) => {
+const updatePost = async (id, user_id, event_id, image_post, content, local, data_postagem, horario) => {
     const result = await pool.query(
         "UPDATE posts SET title = $1, place_id = $2, attraction_id = $3, style_id = $4, time_start = $5, time_end = $6, description = $7, event_photo = $8 WHERE id = $9 RETURNING *",
-        [id, user_id, event_id, image_post, content, data_postagem]
+        [id, user_id, event_id, image_post, content, local, data_postagem, horario]
     );
     return result.rows[0];
 };

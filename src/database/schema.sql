@@ -57,7 +57,9 @@ CREATE TABLE posts (
     event_id INTEGER NOT NULL,
     image_post TEXT NOT NULL,
     content VARCHAR(300) NOT NULL,
+    local VARCHAR(30) NOT NULL,
     data_postagem DATE DEFAULT CURRENT_DATE,
+    horario TIME DEFAULT CURRENT_TIME,
     CONSTRAINT fk_post_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     CONSTRAINT fk_post_event FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE
 );
@@ -194,13 +196,13 @@ NULL,
 NULL,
 'PartyLife2025, #SilentParty, #RaveDaJu, #VemProLuz');
 
-INSERT INTO posts (user_id, event_id, image_post, content, data_postagem)
+INSERT INTO posts (user_id, event_id, image_post, content, local, data_postagem, horario)
 VALUES
-(1, 1, '/uploads/raveFestFeed.jpg', 'Rave do Menor, São Paulo', CURRENT_DATE),
-(2, 2, '/uploads/beachFeed.jpg', 'Praia do Leme, Rio de Janeiro', CURRENT_DATE),
-(3, 3, '/uploads/poolPartyFeed.jpg', 'Pool Party, São Paulo', CURRENT_DATE),
-(4, 4, '/uploads/resenhaFeed.jpg', 'Casa da Juju, São Paulo', CURRENT_DATE),
-(5, 5, '/uploads/car1.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
-(6, 6, '/uploads/corridaPost.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
-(7, 7, '/uploads/beachPost.jpg', 'Pista do Tigre, São Paulo', CURRENT_DATE),
-(8, 8, '/uploads/ravePost.jpg', 'Rave da Ju, São Paulo', CURRENT_DATE);
+(1, 1, 'raveFestFeed.jpg', 'Rave do Menor, São Paulo', 'Casa da Rave', CURRENT_DATE, '19:00'),
+(2, 2, 'beachFeed.jpg', 'Praia do Leme, Rio de Janeiro', 'Praia da Bocaína', CURRENT_DATE, '19:00'),
+(3, 3, 'poolPartyFeed.jpg', 'Pool Party, São Paulo', 'Piscina da Marcela', CURRENT_DATE, '19:00'),
+(4, 4, 'resenhaFeed.jpg', 'Casa da Juju, São Paulo', 'Casa da Ju', CURRENT_DATE, '19:00'),
+(5, 5, 'car1.jpg', 'Pista do Tigre, São Paulo', 'Salão de Festas', CURRENT_DATE, '19:00'),
+(6, 6, 'corridaPost.jpg', 'Pista do Tigre, São Paulo', 'Salão de Festas', CURRENT_DATE, '19:00'),
+(7, 7, 'beachPost.jpg', 'Pista do Tigre, São Paulo', 'Salão de Festas', CURRENT_DATE, '19:00'),
+(8, 8, 'ravePost.jpg', 'Rave da Ju, São Paulo', 'Praia da Bocaína', CURRENT_DATE, '19:00');
